@@ -19,7 +19,7 @@
             "birthdate": "01/01/2000",
             "email": "joe.smith@intuit.com",
             "phone": "123456778"
-        }    
+        }
     ],
 
     "elections": [
@@ -29,25 +29,25 @@
             "questions": [
                 {
                     "questionId": 1,
-                    "question": "cat?"
+                    "question": "A cat is better pet then a dog?"
                 },
                 {
                     "questionId": 2,
-                    "question": "is mayo better than mirical whip"
+                    "question": "mayo better than miracle whip"
                 }
             ]
         },
         {
             "id": 2,
-            "name": "election1",
+            "name": "election2",
             "questions": [
                 {
                     "questionId": 1,
-                    "question": "cat?"
+                    "question": "A cat is better pet then a dog?"
                 },
                 {
                     "questionId": 2,
-                    "question": "is mayo better than mirical whip"
+                    "question": "mayo better than miracle whip"
                 }
             ]
         }

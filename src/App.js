@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import {Register} from "./components/Register";
 import {Vote} from "./components/Vote";
-import {CreateElection} from "./components/CreateElection";
+import {CreateElection} from "./components/CreateElection/CreateElection";
 import {Layout} from "./Layout";
 
 function App() {
