@@ -41,9 +41,9 @@ export const verifyVoter = (voterId, voteFlow) => {
         dispatch(createVerifyVoterRequestAction(voterId));
 
         if (voterId != 0) {
-            
+
             return one(voterId).then(voter => {
-                if (voter.id != 0) {
+                if (voter.id !== undefined) {
                     dispatch(createVerifyVoterDoneAction(voter.id));
                     dispatch(createUpdateVoteFlowAction(voteFlow));
                 };

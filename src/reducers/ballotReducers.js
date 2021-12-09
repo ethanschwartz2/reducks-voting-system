@@ -29,8 +29,12 @@ export const voterIdReducer = (voterId = 0, action) => {
 const errorMessageReducer = (errorMessage = "", action) => {
 
     if (action.type === VERIFY_VOTER_ID_REQUEST_ACTION && action.payload.voterId === 0) {
-      return "Please enter a voter id.";
-    }
+      return "Please enter a valid voter id.";
+    };
+
+    if (action.type === VERIFY_VOTER_ID_DONE_ACTION) {
+        return "";
+    };
 
     return errorMessage;
 };

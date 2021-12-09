@@ -1,7 +1,11 @@
 import { combineReducers } from "redux";
 
 import {
-  REFRESH_VOTERS_DONE_ACTION, EDIT_VOTER_ACTION, CANCEL_VOTER_ACTION, SORT_VOTERS_ACTION,
+  REFRESH_VOTERS_DONE_ACTION, EDIT_VOTER_ACTION, CANCEL_VOTER_ACTION, 
+  SORT_VOTERS_ACTION, DISPLAY_VOTER_ADD_FORM_ACTION, DISPLAY_VOTER_LIST_ACTION,
+  ADD_VOTER_REQUEST_ACTION,
+  DELETE_VOTER_REQUEST_ACTION,
+  REFRESH_VOTERS_REQUEST_ACTION
 } from "../actions/voterToolActions";
 
 // const voterList = [
@@ -18,7 +22,7 @@ export const votersReducer = (voters = [], action) => {
   return voters;
 };
 
-export const editCarIdReducer = (editCarId = -1, action) => {
+export const editVoterIdReducer = (editVoterId = -1, action) => {
 
   if (action.type === EDIT_VOTER_ACTION) {
     return action.payload.voterId;
@@ -30,8 +34,22 @@ export const editCarIdReducer = (editCarId = -1, action) => {
     return -1;
   }
   
-  return editCarId;
+  return editVoterId;
 };
+
+export const displayFormReducer = (displayForm = '', action) => {
+  console.log(action.type);
+  switch(action.type) {
+    case DISPLAY_VOTER_ADD_FORM_ACTION:
+      return "registerVoter";
+    case DISPLAY_VOTER_LIST_ACTION:
+      return "votersList";
+    case ADD_VOTER_REQUEST_ACTION:
+        return "";
+    default: 
+      return displayForm;
+  }
+;}
 
 export const votersSortReducer = (
   votersSort = { col: 'id', dir: 'asc' }, action) => {
@@ -68,7 +86,8 @@ const isLoadingReducer = (isLoading = false, action) => {
 
 export const voterToolReducer = combineReducers({
   voters: votersReducer,
-  editCarId: editCarIdReducer,
+  editVoterId: editVoterIdReducer,
   votersSort: votersSortReducer,
   isLoading: isLoadingReducer,
+  displayForm: displayFormReducer,
 })
