@@ -21,16 +21,17 @@ export const castBallot = ballot => {
         return oneElection(ballot.electionId).then(election => {
             if (!election.voterIds.includes(ballot.voterId)) {
                 election.voterIds.push(ballot.voterId);
-            };
-            election.questions.map(question => {
-                console.log(Object.keys(ballot));
-                if (Object.keys(ballot).includes("" + question.questionId)) {
-                    question.yesCount += 1;
-                };
-            });
-            replaceElection(election).then(election => {
-                dispatch(createCastBallotDoneAction(election.id));
-            });
+
+                election.questions.map(question => {
+                    console.log(Object.keys(ballot));
+                    if (Object.keys(ballot).includes("" + question.questionId)) {
+                        question.yesCount += 1;
+                    };
+                });
+                replaceElection(election).then(election => {
+                    dispatch(createCastBallotDoneAction(election.id));
+                });
+            }
         });
     };
 
