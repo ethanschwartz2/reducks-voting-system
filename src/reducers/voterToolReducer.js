@@ -4,8 +4,6 @@ import {
   REFRESH_VOTERS_DONE_ACTION, EDIT_VOTER_ACTION, CANCEL_VOTER_ACTION, 
   SORT_VOTERS_ACTION, DISPLAY_VOTER_ADD_FORM_ACTION, DISPLAY_VOTER_LIST_ACTION,
   ADD_VOTER_REQUEST_ACTION,
-  DELETE_VOTER_REQUEST_ACTION,
-  REFRESH_VOTERS_REQUEST_ACTION
 } from "../actions/voterToolActions";
 
 // const voterList = [
@@ -38,7 +36,7 @@ export const editVoterIdReducer = (editVoterId = -1, action) => {
 };
 
 export const displayFormReducer = (displayForm = '', action) => {
-  console.log(action.type);
+
   switch(action.type) {
     case DISPLAY_VOTER_ADD_FORM_ACTION:
       return "registerVoter";
