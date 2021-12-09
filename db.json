@@ -1,67 +1,64 @@
 {
-    "voters": [
+  "voters": [
+    {
+      "id": 1,
+      "firstName": "Joe",
+      "lastName": "Smith",
+      "address": "1 Main St",
+      "countyOrCity": "San Diego",
+      "birthdate": "01/01/2000",
+      "email": "joe.smith@intuit.com",
+      "phone": "123456778"
+    },
+    {
+      "id": 2,
+      "firstName": "Joe",
+      "lastName": "Smith",
+      "address": "1 Main St",
+      "countyOrCity": "San Diego",
+      "birthdate": "01/01/2000",
+      "email": "joe.smith@intuit.com",
+      "phone": "123456778"
+    }
+  ],
+  "elections": [
+    {
+      "id": 1,
+      "name": "election1",
+      "voterIds": [
+        1
+      ],
+      "questions": [
         {
-            "id": 1,
-            "firstName": "Joe",
-            "lastName": "Smith",
-            "address": "1 Main St",
-            "countyOrCity": "San Diego",
-            "birthdate": "01/01/2000",
-            "email": "joe.smith@intuit.com",
-            "phone": "123456778"
+          "questionId": 1,
+          "question": "A cat is better pet then a dog?",
+          "yesCount": 6
         },
         {
-            "id": 2,
-            "firstName": "Joe",
-            "lastName": "Smith",
-            "address": "1 Main St",
-            "countyOrCity": "San Diego",
-            "birthdate": "01/01/2000",
-            "email": "joe.smith@intuit.com",
-            "phone": "123456778"
+          "questionId": 2,
+          "question": "Mayo is better than miracle whip",
+          "yesCount": 7
         }
-    ],
-
-    "elections": [
+      ]
+    },
+    {
+      "id": 2,
+      "name": "election2",
+      "voterIds": [
+        2
+      ],
+      "questions": [
         {
-            "id": 1,
-            "name": "election1",
-            "voterIds": [
-                1,
-                2
-            ],
-            "questions": [
-                {
-                    "questionId": 1,
-                    "question": "A cat is better pet then a dog?",
-                    "yesCount": 4
-                },
-                {
-                    "questionId": 2,
-                    "question": "mayo is better than miracle whip",
-                    "yesCount": 5
-                }
-            ]
+          "questionId": 1,
+          "question": "Love French food?",
+          "yesCount": 4
         },
         {
-            "id": 2,
-            "name": "election2",
-            "voterIds": [
-                2
-            ],
-            "questions": [
-                {
-                    "questionId": 1,
-                    "question": "A cat is better pet then a dog?",
-                    "yesCount": 4
-                },
-                {
-                    "questionId": 2,
-                    "question": "mayo is better than miracle whip",
-                    "yesCount": 5
-                }
-            ]
+          "questionId": 2,
+          "question": "Love Italian food?",
+          "yesCount": 5
         }
-    ]
-
+      ]
+    }
+  ]
 }
