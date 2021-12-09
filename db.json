@@ -26,14 +26,19 @@
         {
             "id": 1,
             "name": "election1",
+            "voterIds": [
+
+            ],
             "questions": [
                 {
                     "questionId": 1,
-                    "question": "A cat is better pet then a dog?"
+                    "question": "A cat is better pet then a dog?",
+                    "yesCount": 4
                 },
                 {
                     "questionId": 2,
-                    "question": "mayo better than miracle whip"
+                    "question": "mayo better than miracle whip",
+                    "yesCount": 5
                 }
             ]
         },
@@ -52,38 +57,5 @@
             ]
         }
     ],
-
-    "ballots": [
-        {
-            "id": 1,
-            "electionId": 1,
-            "voterId": 1,
-            "answers": [
-                {
-                    "questionId": 1,
-                    "answer": true
-                },
-                {
-                    "questionId": 2,
-                    "answer": true
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "electionId": 1,
-            "voterId": 1,
-            "answers": [
-                {
-                    "questionId": 1,
-                    "answer": false
-                },
-                {
-                    "questionId": 2,
-                    "answer": true
-                }
-            ]
-        }
-    ]
 
 }
