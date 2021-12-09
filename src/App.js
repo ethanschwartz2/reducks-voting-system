@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+    Link
+} from "react-router-dom";
 import './App.css';
+import {Register} from "./components/Register";
+import {Vote} from "./components/Vote";
+import {CreateElection} from "./components/CreateElection";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+          <nav>
+              <ul className="menu">
+                  <li className="menu-item"><Link to="/register">Register</Link></li>
+                  <li className="menu-item"><Link to="/vote">Vote</Link></li>
+                  <li className="menu-item"><Link to="/createElection">Create Election</Link></li>
+              </ul>
+          </nav>
+          <Routes>
+              <Route path="/register" element={<Register/>}/>
+              <Route path="/vote" element={<Vote/>}/>
+              <Route path="/createElection" element={<CreateElection/>}/>
+              <Route path="*" element={<Vote/>}/>
+          </Routes>
+          <footer>Some Footer </footer>
+      </BrowserRouter>
   );
 }
 
