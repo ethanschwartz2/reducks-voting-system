@@ -5,15 +5,15 @@ export const all = async () => {
     return voters;
   };
   
-  export const one = async (voterId) => {
+export const one = async (voterId) => {
   
     const res = await fetch(
       `http://localhost:5050/voters/${encodeURIComponent(voterId)}`)
     const voter = await res.json();
     return voter;
-  };
+};
   
-  export const append = async (voter) => {
+export const append = async (voter) => {
   
     const res = await fetch("http://localhost:5050/voters", {
       method: 'POST',
@@ -22,9 +22,9 @@ export const all = async () => {
     });
     const newVoter = await res.json();
     return newVoter;
-  };
+};
   
-  export const replace = async (voter) => {
+export const replace = async (voter) => {
   
     const res = await fetch(
       `http://localhost:5050/voters/${encodeURIComponent(voter.id)}`,
@@ -35,12 +35,12 @@ export const all = async () => {
       });
     const newVoter = await res.json();
     return newVoter;
-  };
+};
   
-  export const remove = async (voterId) => {
-  
+export const remove = async (voterId) => {
+
     return fetch(
       `http://localhost:5050/voters/${encodeURIComponent(voterId)}`, {
         method: 'DELETE',
       });
-  };
+};
