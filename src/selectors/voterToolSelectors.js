@@ -13,5 +13,5 @@ const defaultSortItems = (unsortedItems, sortCol, sortDir) => {
   
   export const sortedVotersSelector = state => {
     return defaultSortItems(
-      state.voters, state.votersSort.col, state.votersSort.dir);
+      state.voter.voters, state.voter.votersSort.col, state.voter.votersSort.dir);
   };

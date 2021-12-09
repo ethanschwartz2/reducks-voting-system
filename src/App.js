@@ -4,12 +4,13 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import { Provider } from "react-redux";
+
 import {Register} from "./components/Register";
 import {Vote} from "./components/Vote";
 import {CreateElection} from "./components/CreateElection/CreateElection";
 import {Layout} from "./Layout";
-import { voterToolStore } from "./stores/voterToolStore";
-import { Provider } from "react-redux";
+import { voteToolStore } from "./stores/voteToolStore";
 
 function App() {
   return (
@@ -24,16 +25,18 @@ function App() {
                   </ul>
               </nav>
               <main>
-                  <Routes>
+                <Provider store={voteToolStore}>
+                    <Routes>
                         <Route path="/register" element={
-                            <Provider store={voterToolStore}>
-                                <Register />
-                            </Provider>
+                             <Register />
                         }/>
-                      <Route path="/vote" element={<Vote/>}/>
-                      <Route path="/createElection" element={<CreateElection/>}/>
-                      <Route path="*" element={<Vote/>}/>
-                  </Routes>
+                        <Route path="/vote" element={
+                            <Vote/>
+                        }/>
+                        <Route path="/createElection" element={<CreateElection/>}/>
+                        <Route path="*" element={<Vote/>}/>
+                    </Routes>
+                </Provider>
               </main>
               <footer>Some Footer Text</footer>
           </BrowserRouter>
