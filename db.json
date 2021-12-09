@@ -1,7 +1,7 @@
 {
     "voters": [
         {
-            "voterId": 1,
+            "id": 1,
             "firstName": "Joe",
             "lastName": "Smith",
             "address": "1 Main St",
@@ -11,7 +11,7 @@
             "phone": "123456778"
         },
         {
-            "voterId": 2,
+            "id": 2,
             "firstName": "Joe",
             "lastName": "Smith",
             "address": "1 Main St",
@@ -24,7 +24,7 @@
 
     "elections": [
         {
-            "electionId": 1,
+            "id": 1,
             "name": "election1",
             "questions": [
                 {
@@ -38,7 +38,7 @@
             ]
         },
         {
-            "electionId": 2,
+            "id": 2,
             "name": "election1",
             "questions": [
                 {
@@ -55,7 +55,7 @@
 
     "ballots": [
         {
-            "ballotId": 1,
+            "id": 1,
             "electionId": 1,
             "voterId": 1,
             "answers": [
@@ -68,8 +68,22 @@
                     "answer": true
                 }
             ]
+        },
+        {
+            "id": 2,
+            "electionId": 1,
+            "voterId": 1,
+            "answers": [
+                {
+                    "questionId": 1,
+                    "answer": false
+                },
+                {
+                    "questionId": 2,
+                    "answer": true
+                }
+            ]
         }
-
     ]
 
 }
