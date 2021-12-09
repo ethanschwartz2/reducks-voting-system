@@ -1,24 +1,27 @@
 import { useState } from "react";
+import { useVoterToolReduxStore } from "../hooks/useVoterToolReduxStore";
 import { VoterTool } from "./VoterTool";
 
 export const Register = props => {
 
-  const [displayForm, setDisplayForm] = useState(props.displayForm);
+   const {displayVoterForm, displayVoterList} = useVoterToolReduxStore();
 
-  const displayVoters = () => {
-    setDisplayForm('votersList');
-  };
-  const registerVoter = () => {
-    setDisplayForm('registerVoter');
-  }
+  //  const displayVoters = () => {
+  // //   setDisplayForm('votersList');
+  //     //displayForm = 'votersList';
+  //  };
+  //  const registerVoter = () => {
+  // //   setDisplayForm('registerVoter');
+  //   //displayForm = 'registerVoter';
+  //  }
 
   return (
     <>
 
-      <button onClick={displayVoters}>Display voters</button>
+      <button onClick={displayVoterList}>Display voters</button>
 
-      <button onClick={registerVoter}>Register voter</button>
-      <VoterTool displayForm={displayForm}/>
+      <button onClick={displayVoterForm}>Register voter</button>
+      <VoterTool/>
 
 
     </>

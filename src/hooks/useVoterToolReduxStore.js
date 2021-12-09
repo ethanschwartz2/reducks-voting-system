@@ -4,7 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 
 import {
   addVoter, saveVoter, deleteVoter, refreshVoters,
-  createEditVoterAction, createCancelVoterAction, createSortVotersAction,
+  createEditVoterAction, createCancelVoterAction, 
+  createSortVotersAction, createDisplayVoterFormAction, 
+  createDisplayVoterListAction, 
 } from "../actions/voterToolActions";
 
 import { sortedVotersSelector } from "../selectors/voterToolSelectors";
@@ -13,6 +15,7 @@ export const useVoterToolReduxStore = () => {
 
   const voters = useSelector(sortedVotersSelector);
   const editVoterId = useSelector(state => state.editVoterId);
+  const displayForm = useSelector(state => state.displayForm);
   const { col: sortCol, dir: sortDir } = useSelector(
     state => state.votersSort);
 
@@ -26,6 +29,8 @@ export const useVoterToolReduxStore = () => {
     editVoter: createEditVoterAction,
     cancelVoter: createCancelVoterAction,
     sortVoters: createSortVotersAction,
+    displayVoterForm: createDisplayVoterFormAction,
+    displayVoterList: createDisplayVoterListAction,
   }, dispatch), [dispatch]);
 
   useEffect(() => {
@@ -35,6 +40,7 @@ export const useVoterToolReduxStore = () => {
   return {
     voters,
     editVoterId,
+    displayForm,
     sortCol,
     sortDir,
     ...actions,

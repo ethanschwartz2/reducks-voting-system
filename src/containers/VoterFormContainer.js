@@ -4,10 +4,14 @@ import { VoterForm } from '../components/VoterForm';
 
 export const VoterFormContainer = () => {
 
-  const { addVoter } = useVoterToolReduxStore();
+  const { addVoter, displayForm } = useVoterToolReduxStore();
 
   return (
-    <VoterForm buttonText="Complete Registration" onSubmitVoter={addVoter} />
+      <>
+      {(displayForm === 'registerVoter') 
+        ? <VoterForm buttonText="Complete Registration" onSubmitVoter={addVoter} />
+        : null}
+    </>
   );
 
 };

@@ -5,16 +5,20 @@ import { VoterTable } from '../components/VoterTable';
 export const VoterTableContainer = () => {
 
   const {
-    voters, editVoterId, sortCol, sortDir,
+    voters, editVoterId, displayForm, sortCol, sortDir,
     editVoter, deleteVoter, sortVoters,
     saveVoter, cancelVoter } = useVoterToolReduxStore();
 
   return (
-    <VoterTable voters={voters} editVoterId={editVoterId}
-              sortCol={sortCol} sortDir={sortDir}
-              onEditVoter={editVoter} onDeleteVoter={deleteVoter}
-              onSortVoters={sortVoters}
-              onSaveVoter={saveVoter} onCancelVoter={cancelVoter} />
+    <>
+    {(displayForm === 'votersList') 
+      ? <VoterTable voters={voters} editVoterId={editVoterId}
+                sortCol={sortCol} sortDir={sortDir}
+                onEditVoter={editVoter} onDeleteVoter={deleteVoter}
+                onSortVoters={sortVoters}
+                onSaveVoter={saveVoter} onCancelVoter={cancelVoter} />
+      : null}
+    </>
   );
 
 };

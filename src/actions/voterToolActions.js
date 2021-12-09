@@ -16,6 +16,9 @@ export const EDIT_VOTER_ACTION = 'EDIT_VOTER';
 export const CANCEL_VOTER_ACTION = 'CANCEL_VOTER';
 export const SORT_VOTERS_ACTION = 'SORT_VOTERS';
 
+export const DISPLAY_VOTER_ADD_FORM_ACTION = 'DISPLAY_VOTER_FORM'
+export const DISPLAY_VOTER_LIST_ACTION = 'DISPLAY_VOTER_LIST'
+
 export const createRefreshVotersRequestAction = () => ({ type: REFRESH_VOTERS_REQUEST_ACTION });
 export const createRefreshVotersDoneAction = voters => ({
   type: REFRESH_VOTERS_DONE_ACTION, payload: { voters }
@@ -86,3 +89,7 @@ export const createCancelVoterAction = () =>
   ({ type: CANCEL_VOTER_ACTION });
 export const createSortVotersAction = col =>
   ({ type: SORT_VOTERS_ACTION, payload: { col } });    
+ export const createDisplayVoterFormAction = () => 
+   ({type: DISPLAY_VOTER_ADD_FORM_ACTION})
+   export const createDisplayVoterListAction = () => 
+   ({type: DISPLAY_VOTER_LIST_ACTION})
