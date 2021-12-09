@@ -1,17 +1,6 @@
 import { VoterViewRow } from './VoterViewRow';
 import { VoterEditRow } from './VoterEditRow';
 
-const cols = [
-  [ 'Id', 'id' ],
-  [ 'FirstName', 'firstName' ],
-  [ 'LastName', 'lastName' ],
-  [ 'Address', 'address' ],
-  [ 'CountyOrCity', 'countyOrCity' ],
-  [ 'BirthDate', 'birthdate' ],
-  [ 'Email', 'email' ],
-  [ 'Phone', 'phone' ],
-];
-
 export const VoterTable = props => {
 
   const sortDirectionIndicator = (sortCol) => {
@@ -26,12 +15,30 @@ export const VoterTable = props => {
     <table>
       <thead>
         <tr>
-          {cols.map(([ header, field ]) => <th key={field}>
-            <button type="button" onClick={() => props.onSortVoters(field)}>
-              {header}{sortDirectionIndicator(field)}
-            </button>
-          </th>)}
-          <th>Actions</th>
+          <th><button type="button" onClick={() => props.onSortVoters('id')}>
+              ID{sortDirectionIndicator('id')}
+            </button></th>
+            <th><button type="button" onClick={() => props.onSortVoters('firstName')}>
+              First Name{sortDirectionIndicator('firstName')}
+            </button></th>
+            <th><button type="button" onClick={() => props.onSortVoters('lastName')}>
+              Last Name{sortDirectionIndicator('lastName')}
+            </button></th>
+            <th><button type="button" onClick={() => props.onSortVoters('address')}>
+              Address{sortDirectionIndicator('address')}
+            </button></th>
+            <th><button type="button" onClick={() => props.onSortVoters('countyOrCity')}>
+              County/City{sortDirectionIndicator('countyOrCity')}
+            </button></th>
+            <th><button type="button" onClick={() => props.onSortVoters('birthdate')}>
+              Birthdate{sortDirectionIndicator('birthdate')}
+            </button></th>
+            <th><button type="button" onClick={() => props.onSortVoters('email')}>
+              Email{sortDirectionIndicator('email')}
+            </button></th>
+            <th><button type="button" onClick={() => props.onSortVoters('phone')}>
+              Phone{sortDirectionIndicator('phone')}
+            </button></th>
         </tr>
       </thead>
       <tbody>

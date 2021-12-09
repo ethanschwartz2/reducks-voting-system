@@ -7,8 +7,6 @@ export const useForm = initialForm => {
 
   const change = e => {
 
-    console.log(e);
-
     setForm({
       ...form,
       [ e.target.name ]: e.target.type === 'number'
