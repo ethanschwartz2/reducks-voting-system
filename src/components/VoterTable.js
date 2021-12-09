@@ -1,5 +1,5 @@
 import { VoterViewRow } from './VoterViewRow';
-//import { VoterEditRow } from './VoterEditRow';
+import { VoterEditRow } from './VoterEditRow';
 
 const cols = [
   [ 'Id', 'id' ],
@@ -37,10 +37,8 @@ export const VoterTable = props => {
       <tbody>
         {props.voters.map(voter =>
           props.editVoterId === voter.id
-            // ? <VoterEditRow key={voter.id} voter={voter}
-            //     onSaveVoter={props.onSaveVoter} onCancelVoter={props.onCancelVoter} />
-            ? <VoterViewRow key={voter.id} voter={voter}
-            onEditVoter={props.onEditVoter} onDeleteVoter={props.onDeleteVoter} />
+            ? <VoterEditRow key={voter.id} voter={voter}
+                onSaveVoter={props.onSaveVoter} onCancelVoter={props.onCancelVoter} />
             : <VoterViewRow key={voter.id} voter={voter}
                 onEditVoter={props.onEditVoter} onDeleteVoter={props.onDeleteVoter} />)}
       </tbody>

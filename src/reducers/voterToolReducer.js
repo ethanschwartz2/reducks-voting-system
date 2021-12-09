@@ -18,7 +18,7 @@ export const votersReducer = (voters = [], action) => {
   return voters;
 };
 
-export const editCarIdReducer = (editCarId = -1, action) => {
+export const editVoterIdReducer = (editVoterId = -1, action) => {
 
   if (action.type === EDIT_VOTER_ACTION) {
     return action.payload.voterId;
@@ -30,7 +30,7 @@ export const editCarIdReducer = (editCarId = -1, action) => {
     return -1;
   }
   
-  return editCarId;
+  return editVoterId;
 };
 
 export const votersSortReducer = (
@@ -68,7 +68,7 @@ const isLoadingReducer = (isLoading = false, action) => {
 
 export const voterToolReducer = combineReducers({
   voters: votersReducer,
-  editCarId: editCarIdReducer,
+  editVoterId: editVoterIdReducer,
   votersSort: votersSortReducer,
   isLoading: isLoadingReducer,
 })

@@ -27,7 +27,7 @@ function App() {
                   <Routes>
                         <Route path="/register" element={
                             <Provider store={voterToolStore}>
-                                <Register />
+                                <Register displayForm=""/>
                             </Provider>
                         }/>
                       <Route path="/vote" element={<Vote/>}/>
