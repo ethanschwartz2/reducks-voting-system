@@ -1,0 +1,10 @@
+.CurrentElections >table{
+    width:100%;
+    text-align: left;
+}
+
+.CurrentElections >table> tbody >tr >td>table{
+    background-color:#282828;
+    width:100%;
+    text-align: left;
+}
