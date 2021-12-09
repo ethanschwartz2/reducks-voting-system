@@ -14,10 +14,11 @@ import { sortedVotersSelector } from "../selectors/voterToolSelectors";
 export const useVoterToolReduxStore = () => {
 
   const voters = useSelector(sortedVotersSelector);
-  const editVoterId = useSelector(state => state.editVoterId);
-  const displayForm = useSelector(state => state.displayForm);
+  const editVoterId = useSelector(state => state.voter.editVoterId);
+  const displayForm = useSelector(state => state.voter.displayForm);
+
   const { col: sortCol, dir: sortDir } = useSelector(
-    state => state.votersSort);
+    state => state.voter.votersSort);
 
   const dispatch = useDispatch();
 
