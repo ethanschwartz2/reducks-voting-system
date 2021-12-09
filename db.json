@@ -1,0 +1,75 @@
+{
+    "voters": [
+        {
+            "voterId": 1,
+            "firstName": "Joe",
+            "lastName": "Smith",
+            "address": "1 Main St",
+            "countyOrCity": "San Diego",
+            "birthdate": "01/01/2000",
+            "email": "joe.smith@intuit.com",
+            "phone": "123456778"
+        },
+        {
+            "voterId": 2,
+            "firstName": "Joe",
+            "lastName": "Smith",
+            "address": "1 Main St",
+            "countyOrCity": "San Diego",
+            "birthdate": "01/01/2000",
+            "email": "joe.smith@intuit.com",
+            "phone": "123456778"
+        }    
+    ],
+
+    "elections": [
+        {
+            "electionId": 1,
+            "name": "election1",
+            "questions": [
+                {
+                    "questionId": 1,
+                    "question": "cat?"
+                },
+                {
+                    "questionId": 2,
+                    "question": "is mayo better than mirical whip"
+                }
+            ]
+        },
+        {
+            "electionId": 2,
+            "name": "election1",
+            "questions": [
+                {
+                    "questionId": 1,
+                    "question": "cat?"
+                },
+                {
+                    "questionId": 2,
+                    "question": "is mayo better than mirical whip"
+                }
+            ]
+        }
+    ],
+
+    "ballots": [
+        {
+            "ballotId": 1,
+            "electionId": 1,
+            "voterId": 1,
+            "answers": [
+                {
+                    "questionId": 1,
+                    "answer": true
+                },
+                {
+                    "questionId": 2,
+                    "answer": true
+                }
+            ]
+        }
+
+    ]
+
+}
