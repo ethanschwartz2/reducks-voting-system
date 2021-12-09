@@ -1,5 +1,11 @@
+import { VoterTableContainer } from "../containers/VoterTableContainer";
+
 export const Register = () => {
-    return(<div>
-        Register Screen
-    </div>);
-}
+
+  return (
+    <>
+      <VoterTableContainer />
+    </>
+  );
+
+};

@@ -5,9 +5,11 @@ import {
     Link
 } from "react-router-dom";
 import './App.css';
-import {Register} from "./components/Register";
+import { Provider } from 'react-redux';
 import {Vote} from "./components/Vote";
 import {CreateElection} from "./components/CreateElection";
+import { voterToolStore } from "./stores/voterToolStore";
+import { Register } from "./components/Register";
 
 function App() {
   return (
@@ -20,7 +22,11 @@ function App() {
               </ul>
           </nav>
           <Routes>
-              <Route path="/register" element={<Register/>}/>
+              <Route path="/register" element={
+                <Provider store={voterToolStore}>
+                    <Register />
+                </Provider>
+              }/>
               <Route path="/vote" element={<Vote/>}/>
               <Route path="/createElection" element={<CreateElection/>}/>
               <Route path="*" element={<Vote/>}/>
