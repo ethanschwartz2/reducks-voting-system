@@ -27,7 +27,8 @@
             "id": 1,
             "name": "election1",
             "voterIds": [
-
+                1,
+                2
             ],
             "questions": [
                 {
@@ -37,7 +38,7 @@
                 },
                 {
                     "questionId": 2,
-                    "question": "mayo better than miracle whip",
+                    "question": "mayo is better than miracle whip",
                     "yesCount": 5
                 }
             ]
@@ -45,14 +46,19 @@
         {
             "id": 2,
             "name": "election2",
+            "voterIds": [
+                2
+            ],
             "questions": [
                 {
                     "questionId": 1,
-                    "question": "A cat is better pet then a dog?"
+                    "question": "A cat is better pet then a dog?",
+                    "yesCount": 4
                 },
                 {
                     "questionId": 2,
-                    "question": "mayo better than miracle whip"
+                    "question": "mayo is better than miracle whip",
+                    "yesCount": 5
                 }
             ]
         }
