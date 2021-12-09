@@ -1,3 +1,20 @@
+![Team Logo](./ReDucks.jpg)
+# ReDucks - Put Your Trust in US 
+
+## ReDucks Voting System
+With ReDucks Voting System, you can manage voter registration, election creation, and ballots collection.
+
+## Team Slogan
+> “Testing leads to failure, and failure leads to understanding.” - *Burt Rutan*
+
+## Team Colors
+* Red/White/Blue?
+
+## Team Member
+* Asiya Sayyed
+* Ethan Schwartz
+* Jinglei Whitehouse
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
