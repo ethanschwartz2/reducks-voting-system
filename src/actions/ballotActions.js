@@ -1,4 +1,5 @@
 import { one } from '../apis/voters';
+import { oneElection, replaceElection} from '../apis/elections';
 
 export const CAST_BALLOT_REQUEST_ACTION = 'CAST_BALLOT_REQUEST';
 export const CAST_BALLOT_DONE_ACTION = "CAST_BALLOT_DONE";
@@ -17,8 +18,19 @@ export const castBallot = ballot => {
     return dispatch => {
 
         dispatch(createCastBallotRequestAction());
-        return one(ballot.electionId).then(election => {
-          dispatch(createCastBallotDoneAction(election.id));
+        return oneElection(ballot.electionId).then(election => {
+            if (!election.voterIds.includes(ballot.voterId)) {
+                election.voterIds.push(ballot.voterId);
+            };
+            election.questions.map(question => {
+                console.log(Object.keys(ballot));
+                if (Object.keys(ballot).includes("" + question.questionId)) {
+                    question.yesCount += 1;
+                };
+            });
+            replaceElection(election).then(election => {
+                dispatch(createCastBallotDoneAction(election.id));
+            });
         });
     };
 

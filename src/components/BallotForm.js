@@ -32,7 +32,7 @@ export const BallotForm = props => {
           <label>
               {question.question}
           </label>
-          <input type="checkbox" id={question.id} name={question.question} value="Yes" onChange={change} />
+          <input type="checkbox" id={question.questionId} name={question.questionId} onChange={change} />
         </>
       )})}
       <button type="button" onClick={submitBallot}>{props.buttonText}</button>

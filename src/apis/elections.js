@@ -1,11 +1,11 @@
-export const all = async () => {
+export const allElections = async () => {
 
     const res = await fetch("http://localhost:5050/elections")
     const elections = await res.json();
     return elections;
   };
   
-export const one = async (electionId) => {
+export const oneElection = async (electionId) => {
   
     const res = await fetch(
       `http://localhost:5050/elections/${encodeURIComponent(electionId)}`)
@@ -13,7 +13,7 @@ export const one = async (electionId) => {
     return election;
 };
   
-export const append = async (election) => {
+export const appendElection = async (election) => {
   
     const res = await fetch("http://localhost:5050/elections", {
       method: 'POST',
@@ -24,7 +24,7 @@ export const append = async (election) => {
     return newElection;
 };
 
-export const replace = async (election) => {
+export const replaceElection = async (election) => {
 
     const res = await fetch(
       `http://localhost:5050/elections/${encodeURIComponent(election.id)}`,

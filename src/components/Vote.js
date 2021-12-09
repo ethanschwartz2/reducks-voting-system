@@ -48,7 +48,8 @@ const questions = [
 ];
 
 export const Vote = (props) => {
-    const { voteFlow,
+    const { 
+        voteFlow,
         voterId,
         errorMessage,
         castBallot,
@@ -63,7 +64,7 @@ export const Vote = (props) => {
         ? <VoteIdentificationForm buttonText="Submit" next={BALLOT_FLOW}
             onUpdateVoteFlow={updateVoteFlow} onVerifyVoter={verifyVoter} />
         : voteFlow === BALLOT_FLOW
-        ?<BallotForm buttonText="Submit" electionId="1" voterId="1" 
+        ?<BallotForm buttonText="Submit" electionId="1" voterId={voterId} 
             questions={questions} next={ELECTIONS_FLOW}
             onUpdateVoteFlow={updateVoteFlow} onCastBallot={castBallot} />
         : <>
