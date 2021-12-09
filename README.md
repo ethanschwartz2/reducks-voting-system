@@ -8,7 +8,7 @@ With ReDucks Voting System, you can manage voter registration, election creation
 > “Testing leads to failure, and failure leads to understanding.” - *Burt Rutan*
 
 ## Team Colors
-* Red/White/Blue?
+* Red/White/Black?
 
 ## Team Member
 * Asiya Sayyed
