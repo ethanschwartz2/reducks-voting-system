@@ -1132,7 +1132,7 @@
     "regenerator-runtime" "^0.13.4"
 
 "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
-  "integrity" "sha1-uG8NsCoEGHo8F8qnfeaYQBZdQtU="
+  "integrity" "sha1-uG8NsCoEGHo8F8qnfeaYQBZdQtU= sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@babel/runtime/-/runtime-7.16.3.tgz"
   "version" "7.16.3"
   dependencies:
@@ -1437,7 +1437,7 @@
     "chalk" "^4.0.0"
 
 "@jest/types@^27.4.2":
-  "integrity" "sha1-llNuvTTaY5LCt8dzfWk4hbXdRKU="
+  "integrity" "sha1-llNuvTTaY5LCt8dzfWk4hbXdRKU= sha512-j35yw0PMTPpZsUoOBiuHzr1zTYoad1cVIE0ajEjcrJONxxrko/IRGKkXx3os0Nsi4Hu3+5VmDbVfq5WhG/pWAg=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@jest/types/-/types-27.4.2.tgz"
   "version" "27.4.2"
   dependencies:
@@ -1653,8 +1653,13 @@
   dependencies:
     "defer-to-connect" "^1.0.1"
 
+<<<<<<< HEAD
 "@testing-library/dom@^7.28.1", "@testing-library/dom@>=7.21.4":
   "integrity" "sha1-3zYds49SEriFVQaKuBGfXYQajEo="
+=======
+"@testing-library/dom@^7.28.1":
+  "integrity" "sha1-3zYds49SEriFVQaKuBGfXYQajEo= sha512-3UqjCpey6HiTZT92vODYLPxTBWlM8ZOOjr3LX5F37/VRipW2M1kX6I/Cm4VXzteZqfGfagg8yXywpcOgQBlNsQ=="
+>>>>>>> voterRegistration
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@testing-library/dom/-/dom-7.31.2.tgz"
   "version" "7.31.2"
   dependencies:
@@ -1668,7 +1673,7 @@
     "pretty-format" "^26.6.2"
 
 "@testing-library/jest-dom@^5.11.4":
-  "integrity" "sha1-PbffWul1liZKfalpb+FGlboC5R8="
+  "integrity" "sha1-PbffWul1liZKfalpb+FGlboC5R8= sha512-ajUJdfDIuTCadB79ukO+0l8O+QwN0LiSxDaYUTI4LndbbUsGi6rWU1SCexXzBA2NSjlVB9/vbkasQIL3tmPBjw=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@testing-library/jest-dom/-/jest-dom-5.16.1.tgz"
   "version" "5.16.1"
   dependencies:
@@ -1683,7 +1688,7 @@
     "redent" "^3.0.0"
 
 "@testing-library/react@^11.1.0":
-  "integrity" "sha1-sp4ulcZ2XIFXhsC8HVrtnLK/eBg="
+  "integrity" "sha1-sp4ulcZ2XIFXhsC8HVrtnLK/eBg= sha512-tzRNp7pzd5QmbtXNG/mhdcl7Awfu/Iz1RaVHY75zTdOkmHCuzMhRL83gWHSgOAcjS3CCbyfwUHMZgRJb4kAfpA=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@testing-library/react/-/react-11.2.7.tgz"
   "version" "11.2.7"
   dependencies:
@@ -1691,7 +1696,7 @@
     "@testing-library/dom" "^7.28.1"
 
 "@testing-library/user-event@^12.1.10":
-  "integrity" "sha1-GqPtS595NAoeGDa8f1fFAeg4cEo="
+  "integrity" "sha1-GqPtS595NAoeGDa8f1fFAeg4cEo= sha512-IR0iWbFkgd56Bu5ZI/ej8yQwrkCv8Qydx6RzwbKz9faXazR/+5tvYKsZQgyXJiwgpcva127YO6JcWy7YlCfofQ=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@testing-library/user-event/-/user-event-12.8.3.tgz"
   "version" "12.8.3"
   dependencies:
@@ -1703,7 +1708,7 @@
   "version" "1.3.1"
 
 "@types/aria-query@^4.2.0":
-  "integrity" "sha1-7U4K2SMGpwT5+xMqDPz3dIbb4rw="
+  "integrity" "sha1-7U4K2SMGpwT5+xMqDPz3dIbb4rw= sha512-HnYpAE1Y6kRyKM/XkEuiRQhTHvkzMBurTHnpFLYLBGPIylZNPs9jJcuOOYWxPLJCSEtmZT0Y8rHDokKN7rRTig=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@types/aria-query/-/aria-query-4.2.2.tgz"
   "version" "4.2.2"
 
@@ -1806,7 +1811,7 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/jest@*":
-  "integrity" "sha1-DPnf6QCeRn9wo0Lw+U6tGYQqeDo="
+  "integrity" "sha1-DPnf6QCeRn9wo0Lw+U6tGYQqeDo= sha512-cmmwv9t7gBYt7hNKH5Spu7Kuu/DotGa+Ff+JGRKZ4db5eh8PnKS4LuebJ3YLUoyOyIHraTGyULn23YtEAm0VSg=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@types/jest/-/jest-27.0.3.tgz"
   "version" "27.0.3"
   dependencies:
@@ -1905,7 +1910,7 @@
   "version" "1.0.6"
 
 "@types/testing-library__jest-dom@^5.9.1":
-  "integrity" "sha1-Vk+ystyCcUfpN6dbY5oF0Xzhi0Q="
+  "integrity" "sha1-Vk+ystyCcUfpN6dbY5oF0Xzhi0Q= sha512-vehbtyHUShPxIa9SioxDwCvgxukDMH//icJG90sXQBUm5lJOHLT5kNeU9tnivhnA/TkOFMzGIXN2cTc4hY8/kg=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@types/testing-library__jest-dom/-/testing-library__jest-dom-5.14.2.tgz"
   "version" "5.14.2"
   dependencies:
@@ -1952,7 +1957,7 @@
     "@types/yargs-parser" "*"
 
 "@types/yargs@^16.0.0":
-  "integrity" "sha1-JqrZjdLCo45CEIbqmtQrnlFkKXc="
+  "integrity" "sha1-JqrZjdLCo45CEIbqmtQrnlFkKXc= sha512-T8Yc9wt/5LbJyCaLiHPReJa0kApcIgJ7Bn735GjItUfh08Z1pJvu8QZqb9s+mMvKV6WUQRV7K2R46YbjMXTTJw=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/@types/yargs/-/yargs-16.0.4.tgz"
   "version" "16.0.4"
   dependencies:
@@ -2357,7 +2362,7 @@
   "version" "4.1.0"
 
 "ansi-regex@^5.0.0", "ansi-regex@^5.0.1":
-  "integrity" "sha1-CCyyyJyf6GWaMRpTvWpNxTAdswQ="
+  "integrity" "sha1-CCyyyJyf6GWaMRpTvWpNxTAdswQ= sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/ansi-regex/-/ansi-regex-5.0.1.tgz"
   "version" "5.0.1"
 
@@ -2383,7 +2388,7 @@
     "color-convert" "^2.0.1"
 
 "ansi-styles@^5.0.0":
-  "integrity" "sha1-B0SWkK1Fd30ZJKwquy/IiV26g2s="
+  "integrity" "sha1-B0SWkK1Fd30ZJKwquy/IiV26g2s= sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/ansi-styles/-/ansi-styles-5.2.0.tgz"
   "version" "5.2.0"
 
@@ -2432,7 +2437,7 @@
     "@babel/runtime-corejs3" "^7.10.2"
 
 "aria-query@^5.0.0":
-  "integrity" "sha1-IQwhqvRpYT7oyaYsf4ZSXgWNtSw="
+  "integrity" "sha1-IQwhqvRpYT7oyaYsf4ZSXgWNtSw= sha512-V+SM7AbUwJ+EBnB8+DXs0hPZHO0W6pqBcc0dW90OwtVG02PswOu/teuARoLQjdDOH+t9pJgGnW5/Qmouf3gPJg=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/aria-query/-/aria-query-5.0.0.tgz"
   "version" "5.0.0"
 
@@ -3330,13 +3335,14 @@
     "supports-color" "^5.3.0"
 
 "chalk@^3.0.0":
-  "integrity" "sha1-P3PCv1JlkfV0zEksUeJFY0n4ROQ="
+  "integrity" "sha1-P3PCv1JlkfV0zEksUeJFY0n4ROQ= sha512-4D3B6Wf41KOYRFdszmDqMCGq5VV/uMAB273JILmO+3jAlh8X4qDtdtgCR3fxtbLEMzSx22QdhnDcJvu2u1fVwg=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/chalk/-/chalk-3.0.0.tgz"
   "version" "3.0.0"
   dependencies:
     "ansi-styles" "^4.1.0"
     "supports-color" "^7.1.0"
 
+<<<<<<< HEAD
 "chalk@^4.0.0", "chalk@^4.1.0":
   "integrity" "sha512-qwx12AxXe2Q5xQ43Ac//I6v5aXTipYrSESdOgzrN+9XjgEpyjpKuvSGaN4qE93f7TQTlerQQ8S+EQ0EyDoVL1A=="
   "resolved" "https://registry.npmjs.org/chalk/-/chalk-4.1.0.tgz"
@@ -3347,6 +3353,10 @@
 
 "chalk@^4.1.2":
   "integrity" "sha1-qsTit3NKdAhnrrFr8CqtVWoeegE="
+=======
+"chalk@^4.0.0", "chalk@^4.1.0", "chalk@^4.1.2":
+  "integrity" "sha1-qsTit3NKdAhnrrFr8CqtVWoeegE= sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA=="
+>>>>>>> voterRegistration
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/chalk/-/chalk-4.1.2.tgz"
   "version" "4.1.2"
   dependencies:
@@ -3840,7 +3850,7 @@
     "safe-buffer" "^5.0.1"
     "sha.js" "^2.4.8"
 
-"cross-spawn@^6.0.0":
+"cross-spawn@^6.0.0", "cross-spawn@^6.0.5":
   "integrity" "sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ=="
   "resolved" "https://registry.npmjs.org/cross-spawn/-/cross-spawn-6.0.5.tgz"
   "version" "6.0.5"
@@ -3851,18 +3861,32 @@
     "shebang-command" "^1.2.0"
     "which" "^1.2.9"
 
+<<<<<<< HEAD
 "cross-spawn@^6.0.5":
   "integrity" "sha1-Sl7Hxk364iw6FBJNus3uhG2Ay8Q="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/cross-spawn/-/cross-spawn-6.0.5.tgz"
   "version" "6.0.5"
+=======
+"cross-spawn@^7.0.0":
+  "integrity" "sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w=="
+  "resolved" "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
+  "version" "7.0.3"
+>>>>>>> voterRegistration
   dependencies:
-    "nice-try" "^1.0.4"
-    "path-key" "^2.0.1"
-    "semver" "^5.5.0"
-    "shebang-command" "^1.2.0"
-    "which" "^1.2.9"
+    "path-key" "^3.1.0"
+    "shebang-command" "^2.0.0"
+    "which" "^2.0.1"
 
-"cross-spawn@^7.0.0", "cross-spawn@^7.0.2", "cross-spawn@7.0.3":
+"cross-spawn@^7.0.2":
+  "integrity" "sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w=="
+  "resolved" "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
+  "version" "7.0.3"
+  dependencies:
+    "path-key" "^3.1.0"
+    "shebang-command" "^2.0.0"
+    "which" "^2.0.1"
+
+"cross-spawn@7.0.3":
   "integrity" "sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w=="
   "resolved" "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
   "version" "7.0.3"
@@ -4003,7 +4027,7 @@
     "urix" "^0.1.0"
 
 "css@^3.0.0":
-  "integrity" "sha1-REek1Y/dAzZ8UWyp9krjZc7kql0="
+  "integrity" "sha1-REek1Y/dAzZ8UWyp9krjZc7kql0= sha512-DG9pFfwOrzc+hawpmqX/dHYHJG+Bsdb0klhyi1sDneOgGOXy9wQIC8hzyVp1e4NRYDBdxcylvywPkkXCHAzTyQ=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/css/-/css-3.0.0.tgz"
   "version" "3.0.0"
   dependencies:
@@ -4157,35 +4181,7 @@
     "whatwg-mimetype" "^2.3.0"
     "whatwg-url" "^8.0.0"
 
-"debug@*", "debug@^4.0.1", "debug@^4.1.0", "debug@^4.1.1":
-  "integrity" "sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ=="
-  "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz"
-  "version" "4.3.1"
-  dependencies:
-    "ms" "2.1.2"
-
-"debug@^2.2.0":
-  "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
-  "resolved" "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
-  "version" "2.6.9"
-  dependencies:
-    "ms" "2.0.0"
-
-"debug@^2.3.3":
-  "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
-  "resolved" "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
-  "version" "2.6.9"
-  dependencies:
-    "ms" "2.0.0"
-
-"debug@^2.6.0":
-  "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
-  "resolved" "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
-  "version" "2.6.9"
-  dependencies:
-    "ms" "2.0.0"
-
-"debug@^2.6.9":
+"debug@*", "debug@^2.2.0", "debug@^2.3.3", "debug@^2.6.0", "debug@^2.6.9", "debug@2.6.9":
   "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
   "resolved" "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
   "version" "2.6.9"
@@ -4206,12 +4202,26 @@
   dependencies:
     "ms" "^2.1.1"
 
-"debug@2.6.9":
-  "integrity" "sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA=="
-  "resolved" "https://registry.npmjs.org/debug/-/debug-2.6.9.tgz"
-  "version" "2.6.9"
+"debug@^4.0.1":
+  "integrity" "sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ=="
+  "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz"
+  "version" "4.3.1"
   dependencies:
-    "ms" "2.0.0"
+    "ms" "2.1.2"
+
+"debug@^4.1.0":
+  "integrity" "sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ=="
+  "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz"
+  "version" "4.3.1"
+  dependencies:
+    "ms" "2.1.2"
+
+"debug@^4.1.1":
+  "integrity" "sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ=="
+  "resolved" "https://registry.npmjs.org/debug/-/debug-4.3.1.tgz"
+  "version" "4.3.1"
+  dependencies:
+    "ms" "2.1.2"
 
 "debug@3.1.0":
   "integrity" "sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE="
@@ -4381,7 +4391,7 @@
   "version" "26.6.2"
 
 "diff-sequences@^27.4.0":
-  "integrity" "sha1-14OSCtjQbscYoGDQAZbf7yWxMqU="
+  "integrity" "sha1-14OSCtjQbscYoGDQAZbf7yWxMqU= sha512-YqiQzkrsmHMH5uuh8OdQFU9/ZpADnwzml8z0O5HvRNda+5UZsaX/xN+AAxfR2hWq1Y7HZnAzO9J5lJXOuDz2Ww=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/diff-sequences/-/diff-sequences-27.4.0.tgz"
   "version" "27.4.0"
 
@@ -6100,7 +6110,7 @@
   "version" "5.1.8"
 
 "immer@8.0.1":
-  "integrity" "sha1-nHPbaD4rOXXEJPsFcq9YiYd65lY="
+  "integrity" "sha1-nHPbaD4rOXXEJPsFcq9YiYd65lY= sha512-aqXhGP7//Gui2+UrEtvxZxSquQVXTpZ7KDxfCcKAF3Vysvw0CViVaW9RZ1j1xlIYqaaaipBoqdqeibkc18PNvA=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/immer/-/immer-8.0.1.tgz"
   "version" "8.0.1"
 
@@ -6800,7 +6810,7 @@
     "pretty-format" "^26.6.2"
 
 "jest-diff@^27.0.0":
-  "integrity" "sha1-eGsqUhHYVPhI4tzB4yREjpSB828="
+  "integrity" "sha1-eGsqUhHYVPhI4tzB4yREjpSB828= sha512-ujc9ToyUZDh9KcqvQDkk/gkbf6zSaeEg9AiBxtttXW59H/AcqEYp1ciXAtJp+jXWva5nAf/ePtSsgWwE5mqp4Q=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/jest-diff/-/jest-diff-27.4.2.tgz"
   "version" "27.4.2"
   dependencies:
@@ -6858,7 +6868,7 @@
   "version" "26.3.0"
 
 "jest-get-type@^27.4.0":
-  "integrity" "sha1-dQPSZj//pDFjgzezmY05xeko6bU="
+  "integrity" "sha1-dQPSZj//pDFjgzezmY05xeko6bU= sha512-tk9o+ld5TWq41DkK14L4wox4s2D9MtTpKaAVzXfr5CUKm5ZK2ExcaFE0qls2W71zE/6R2TxxrK9w2r6svAFDBQ=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/jest-get-type/-/jest-get-type-27.4.0.tgz"
   "version" "27.4.0"
 
@@ -7611,7 +7621,7 @@
   "version" "1.7.1"
 
 "loose-envify@^1.1.0", "loose-envify@^1.4.0":
-  "integrity" "sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8="
+  "integrity" "sha1-ce5R+nvkyuwaY4OffmgtgTLTDK8= sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/loose-envify/-/loose-envify-1.4.0.tgz"
   "version" "1.4.0"
   dependencies:
@@ -7872,7 +7882,7 @@
   "version" "1.0.1"
 
 "min-indent@^1.0.0":
-  "integrity" "sha1-pj9oFnOzBXH76LwlaGrnRu76mGk="
+  "integrity" "sha1-pj9oFnOzBXH76LwlaGrnRu76mGk= sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/min-indent/-/min-indent-1.0.1.tgz"
   "version" "1.0.1"
 
@@ -8009,9 +8019,15 @@
     "run-queue" "^1.0.3"
 
 "ms@^2.1.1":
+<<<<<<< HEAD
   "integrity" "sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA=="
   "resolved" "https://registry.npmjs.org/ms/-/ms-2.1.3.tgz"
   "version" "2.1.3"
+=======
+  "integrity" "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
+  "resolved" "https://registry.npmjs.org/ms/-/ms-2.1.2.tgz"
+  "version" "2.1.2"
+>>>>>>> voterRegistration
 
 "ms@2.0.0":
   "integrity" "sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g="
@@ -9813,7 +9829,7 @@
     "whatwg-fetch" "^3.4.1"
 
 "react-dev-utils@^11.0.3":
-  "integrity" "sha1-p8y2Alehyi4O/nqD445nANF6o3o="
+  "integrity" "sha1-p8y2Alehyi4O/nqD445nANF6o3o= sha512-dx0LvIGHcOPtKbeiSUM4jqpBl3TcY7CDjZdfOIcKeznE7BWr9dg0iPG90G5yfVQ+p/rGNMXdbfStvzQZEVEi4A=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/react-dev-utils/-/react-dev-utils-11.0.4.tgz"
   "version" "11.0.4"
   dependencies:
@@ -9843,7 +9859,7 @@
     "text-table" "0.2.0"
 
 "react-dom@*", "react-dom@^17.0.2", "react-dom@>=16.8":
-  "integrity" "sha1-7P+2hF462Nv83EmPDQqTlzZQLCM="
+  "integrity" "sha1-7P+2hF462Nv83EmPDQqTlzZQLCM= sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
   dependencies:
@@ -9909,7 +9925,7 @@
     "history" "^5.1.0"
 
 "react-scripts@4.0.3":
-  "integrity" "sha1-scr+18P6YD52KLoPGHeHlky100U="
+  "integrity" "sha1-scr+18P6YD52KLoPGHeHlky100U= sha512-S5eO4vjUzUisvkIPB7jVsKtuH2HhWcASREYWHAQ1FP5HyCv3xgn+wpILAEWkmy+A+tTNbSZClhxjT3qz6g4L1A=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/react-scripts/-/react-scripts-4.0.3.tgz"
   "version" "4.0.3"
   dependencies:
@@ -9975,7 +9991,7 @@
     "fsevents" "^2.1.3"
 
 "react@*", "react@^16.8.3 || ^17", "react@^17.0.2", "react@>= 16", "react@>=16.8", "react@17.0.2":
-  "integrity" "sha1-0LXMUW0p6z7uOD91tihkz7aAADc="
+  "integrity" "sha1-0LXMUW0p6z7uOD91tihkz7aAADc= sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
   dependencies:
@@ -10091,7 +10107,7 @@
     "minimatch" "3.0.4"
 
 "redent@^3.0.0":
-  "integrity" "sha1-5Ve3mYMWu1PJ8fVvpiY1LGljBZ8="
+  "integrity" "sha1-5Ve3mYMWu1PJ8fVvpiY1LGljBZ8= sha512-6tDA8g98We0zd0GvVeMT9arEOnTw9qM03L9cJXaCjrip1OO764RDBLBfrB4cwzNGDj5OA5ioymC9GkizgWJDUg=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/redent/-/redent-3.0.0.tgz"
   "version" "3.0.0"
   dependencies:
@@ -10566,7 +10582,7 @@
     "xmlchars" "^2.2.0"
 
 "scheduler@^0.20.2":
-  "integrity" "sha1-S67jlDbjSqk7SHS93L8P6Li1DpE="
+  "integrity" "sha1-S67jlDbjSqk7SHS93L8P6Li1DpE= sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/scheduler/-/scheduler-0.20.2.tgz"
   "version" "0.20.2"
   dependencies:
@@ -10663,6 +10679,7 @@
   "version" "6.3.0"
 
 "semver@^7.2.1":
+<<<<<<< HEAD
   "integrity" "sha512-tCfb2WLjqFAtXn4KEdxIhalnRtoKFN7nAwj0B3ZXCbQloV2tq5eDbcTmT68JJD3nRJq24/XgxtQKFIpQdtvmVw=="
   "resolved" "https://registry.npmjs.org/semver/-/semver-7.3.4.tgz"
   "version" "7.3.4"
@@ -10675,6 +10692,16 @@
   "version" "7.3.4"
   dependencies:
     "lru-cache" "^6.0.0"
+=======
+  "integrity" "sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ=="
+  "resolved" "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz"
+  "version" "7.3.2"
+
+"semver@^7.3.2":
+  "integrity" "sha512-OrOb32TeeambH6UrhtShmF7CRDqhL6/5XpPNp2DuRH6+9QLw/orhp72j87v8Qa1ScDkvrrBNpZcDejAirJmfXQ=="
+  "resolved" "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz"
+  "version" "7.3.2"
+>>>>>>> voterRegistration
 
 "semver@^7.3.4":
   "integrity" "sha1-C2Ich5NI2JmOSw5L6Us/EuYBjvc="
@@ -10941,7 +10968,7 @@
     "urix" "^0.1.0"
 
 "source-map-resolve@^0.6.0":
-  "integrity" "sha1-PZ34fiNrU/FtAeWBUPx3EROOXtI="
+  "integrity" "sha1-PZ34fiNrU/FtAeWBUPx3EROOXtI= sha512-KXBr9d/fO/bWo97NXsPIAW1bFSBOuCnjbNTBMO7N59hsv5i9yzRDfcYwwt0l04+VqnKC+EwzvJZIP/qkuMgR/w=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/source-map-resolve/-/source-map-resolve-0.6.0.tgz"
   "version" "0.6.0"
   dependencies:
@@ -11330,7 +11357,7 @@
   "version" "2.0.0"
 
 "strip-indent@^3.0.0":
-  "integrity" "sha1-wy4c7pQLazQyx3G8LFS8znPNMAE="
+  "integrity" "sha1-wy4c7pQLazQyx3G8LFS8znPNMAE= sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/strip-indent/-/strip-indent-3.0.0.tgz"
   "version" "3.0.0"
   dependencies:
@@ -12116,7 +12143,7 @@
     "minimalistic-assert" "^1.0.0"
 
 "web-vitals@^1.0.1":
-  "integrity" "sha1-BlNTCBaJhgliOaqEcW5otMaubRw="
+  "integrity" "sha1-BlNTCBaJhgliOaqEcW5otMaubRw= sha512-PFMKIY+bRSXlMxVAQ+m2aw9c/ioUYfDgrYot0YUa+/xa0sakubWhSDyxAKwzymvXVdF4CZI71g06W+mqhzu6ig=="
   "resolved" "https://registry.npmjs.intuit.com:443/artifactory/api/npm/npm-intuit/web-vitals/-/web-vitals-1.1.2.tgz"
   "version" "1.1.2"
 
