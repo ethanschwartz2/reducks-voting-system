@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 
 import {
-  REFRESH_VOTERS_DONE_ACTION, EDIT_VOTER_ACTION, CANCEL_VOTER_ACTION, 
+  REFRESH_VOTERS_DONE_ACTION, EDIT_VOTER_ACTION, CANCEL_VOTER_ACTION,
   SORT_VOTERS_ACTION, DISPLAY_VOTER_ADD_FORM_ACTION, DISPLAY_VOTER_LIST_ACTION,
   ADD_VOTER_REQUEST_ACTION,
-  SELECT_VOTER_IDS_ACTION, DESELECT_VOTER_IDS_ACTION,
+  SELECT_VOTER_IDS_ACTION, DESELECT_VOTER_IDS_ACTION, RESET_FORM_ACTION,
 } from "../actions/voterToolActions";
 
 // const voterList = [
@@ -32,7 +32,7 @@ export const editVoterIdReducer = (editVoterId = -1, action) => {
   ].includes(action.type)) {
     return -1;
   }
-  
+
   return editVoterId;
 };
 
@@ -45,7 +45,9 @@ export const displayFormReducer = (displayForm = '', action) => {
       return "votersList";
     case ADD_VOTER_REQUEST_ACTION:
         return "";
-    default: 
+    case RESET_FORM_ACTION:
+      return "";
+    default:
       return displayForm;
   }
 };
@@ -70,11 +72,14 @@ export const votersSortReducer = (
         return { ...votersSort, dir: 'desc'};
       } else {
         return { ...votersSort, dir: 'asc'};
-      }      
+      }
     } else {
       return { ...votersSort, col: action.payload.col, dir: 'asc'};
     }
 
+  }
+  if (action.type === RESET_FORM_ACTION) {
+    return { col: 'id', dir: 'asc' }
   }
 
   return votersSort;

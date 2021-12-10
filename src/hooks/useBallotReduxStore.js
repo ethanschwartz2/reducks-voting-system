@@ -8,6 +8,7 @@ import {
   verifyVoter,
   refreshElection,
   createUpdateVoteFlowAction,
+  resetFormData,
 } from "../actions/ballotActions";
 
 export const useBallotReduxStore = () => {
@@ -22,6 +23,7 @@ export const useBallotReduxStore = () => {
     castBallot,
     verifyVoter,
     refreshElection,
+    resetBallotFormData: resetFormData,
     updateVoteFlow: createUpdateVoteFlowAction,
   }, dispatch), [dispatch]);
 

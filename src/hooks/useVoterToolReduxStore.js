@@ -4,11 +4,12 @@ import { useSelector, useDispatch } from "react-redux";
 
 import {
   addVoter, saveVoter, deleteVoter, refreshVoters, deleteManyVoters,
-  createEditVoterAction, createCancelVoterAction, 
-  createSortVotersAction, createDisplayVoterFormAction, 
+  createEditVoterAction, createCancelVoterAction,
+  createSortVotersAction, createDisplayVoterFormAction,
   createDisplayVoterListAction,
   createSelectVoterIdsAction,
-  createDeSelectVoterIdsAction, 
+  createDeSelectVoterIdsAction,
+  resetFormData,
 } from "../actions/voterToolActions";
 
 import { sortedVotersSelector } from "../selectors/voterToolSelectors";
@@ -38,11 +39,12 @@ export const useVoterToolReduxStore = () => {
     displayVoterList: createDisplayVoterListAction,
     selectVoterIds: createSelectVoterIdsAction,
     deselectVoterIds: createDeSelectVoterIdsAction,
+    resetVoterFormData: resetFormData,
   }, dispatch), [dispatch]);
 
   useEffect(() => {
     actions.refreshVoters();
-  }, [actions]);  
+  }, [actions]);
 
   return {
     voters,

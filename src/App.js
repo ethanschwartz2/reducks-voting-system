@@ -11,14 +11,17 @@ import {Vote} from "./components/Vote";
 import {CreateElection} from "./components/CreateElection/CreateElection";
 import {Layout} from "./Layout";
 
-// import { useVoterToolReduxStore } from "./hooks/useVoterToolReduxStore";
+import { useVoterToolReduxStore } from "./hooks/useVoterToolReduxStore";
 import { useBallotReduxStore } from "./hooks/useBallotReduxStore";
-import { ELECTIONS_FLOW } from "./reducers/ballotReducers";
 
 function App() {
     const {
-        updateVoteFlow,
+        resetBallotFormData,
     } = useBallotReduxStore();
+
+    const {
+        resetVoterFormData,
+    } = useVoterToolReduxStore()
 
     return (
       <Layout>
@@ -27,12 +30,13 @@ function App() {
               <nav>
 
                   <ul className="menu">
-                      <li className="menu-item" onClick={() => updateVoteFlow(ELECTIONS_FLOW)}
+                      <li className="menu-item" onClick={() => resetBallotFormData()}
                       ><Link to="/register">Register</Link></li>
-                      <li className="menu-item" onClick={ () => {
+                      <li className="menu-item" onClick={ () => { resetVoterFormData()
                       }}><Link to="/vote">Vote</Link></li>
                       <li className="menu-item" onClick={() => {
-                          updateVoteFlow(ELECTIONS_FLOW);
+                          resetBallotFormData();
+                          resetVoterFormData();
                       }}>
                       <Link to="/createElection">Create Election</Link></li>
                   </ul>
