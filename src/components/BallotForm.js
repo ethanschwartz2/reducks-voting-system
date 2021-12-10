@@ -4,8 +4,9 @@ import {Fragment} from "react";
 export const BallotForm = props => {
 
   const [ ballotForm, change, resetBallotForm ] = useForm({
-    electionId: props.election.id,
     voterId: props.voterId,
+    electionId: props.election.id,
+    electionName: props.election.name,
     questions: props.election.questions,
   });
 
@@ -18,15 +19,12 @@ export const BallotForm = props => {
 
   return (
     <form>
-      <label>
-        Election ID: {ballotForm.electionId}
-      </label>
-      <label>
-        Voter ID: {ballotForm.voterId}
-      </label>
-      <label>
-        Questions:
-      </label>
+      <h2>Election ID: {ballotForm.electionId}</h2>
+      <h2>Election Name: {ballotForm.electionName}</h2>
+      <h2>Voter ID: {ballotForm.voterId}</h2>
+      <h2>Questions:</h2>
+      <table>
+        <tbody>
       {ballotForm.questions.map( (question) => {
         return (
         <Fragment key={question.questionId}>
@@ -37,6 +35,8 @@ export const BallotForm = props => {
             name={question.questionId} onChange={change} />
         </Fragment>
       )})}
+        </tbody>
+      </table>
       <button type="button" onClick={submitBallot}>{props.buttonText}</button>
     </form>
   );

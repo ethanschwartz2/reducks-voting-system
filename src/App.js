@@ -37,8 +37,7 @@ function App() {
                       <li className="menu-item" onClick={() => {
                           resetBallotFormData();
                           resetVoterFormData();
-                      }}>
-                      <Link to="/createElection">Create Election</Link></li>
+                      }}><Link to="/createElection">Create Election</Link></li>
                   </ul>
               </nav>
               <main>

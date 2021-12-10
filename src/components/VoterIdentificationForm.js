@@ -17,9 +17,9 @@ export const VoteIdentificationForm = props => {
     <form>
       <label>
         Please enter your voter ID:
-        <input type="number" key={voteIdentificationForm.voterId} name="voterId"
-          value={voteIdentificationForm.voterId} onChange={change} />
       </label>
+      <input type="number" key={voteIdentificationForm.voterId} name="voterId"
+          value={voteIdentificationForm.voterId} onChange={change} />
       <button type="button" onClick={submitVoterIdentification}>{props.buttonText}</button>
     </form>
   );

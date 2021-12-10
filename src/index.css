@@ -22,5 +22,5 @@ input {
 }
 
 label {
-  display: block;
+  float:left;
 }
