@@ -4,6 +4,7 @@ import {
     Route,
     Link,
 } from "react-router-dom";
+import logo from '../src/img/ReDucks.jpg'
 
 import {Register} from "./components/Register";
 import {Vote} from "./components/Vote";
@@ -22,10 +23,11 @@ function App() {
     return (
       <Layout>
           <BrowserRouter>
-              <header><h1>ReDucks Voting System</h1></header>
+              <header><img src={logo} alt="logo" style={{width:'125px',position:'absolute',left:"0", marginTop:'40px'}}/> <h1>ReDucks Voting System</h1></header>
               <nav>
+
                   <ul className="menu">
-                      //<li className="menu-item" onSelect={() => updateVoteFlow(ELECTIONS_FLOW)} 
+                      <li className="menu-item" onSelect={() => updateVoteFlow(ELECTIONS_FLOW)}
                       ><Link to="/register">Register</Link></li>
                       <li className="menu-item" onSelect={ () => {
                       }}><Link to="/vote">Vote</Link></li>
@@ -47,7 +49,7 @@ function App() {
                         <Route path="*" element={<Vote/>}/>
                     </Routes>
               </main>
-              <footer>Some Footer Text</footer>
+              <footer>“Testing leads to failure, and failure leads to understanding.” - Burt Rutan</footer>
           </BrowserRouter>
       </Layout>
   );

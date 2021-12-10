@@ -1,4 +1,4 @@
-![Team Logo](./ReDucks.jpg)
+![Team Logo](src/img/ReDucks.jpg)
 # ReDucks - Put Your Trust in US 
 
 ## ReDucks Voting System
