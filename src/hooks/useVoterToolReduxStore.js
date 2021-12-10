@@ -3,7 +3,7 @@ import { bindActionCreators } from "redux";
 import { useSelector, useDispatch } from "react-redux";
 
 import {
-  addVoter, saveVoter, deleteVoter, refreshVoters,
+  addVoter, saveVoter, deleteVoter, refreshVoters, deleteManyVoters,
   createEditVoterAction, createCancelVoterAction, 
   createSortVotersAction, createDisplayVoterFormAction, 
   createDisplayVoterListAction,
@@ -18,7 +18,7 @@ export const useVoterToolReduxStore = () => {
   const voters = useSelector(sortedVotersSelector);
   const editVoterId = useSelector(state => state.voter.editVoterId);
   const displayForm = useSelector(state => state.voter.displayForm);
-  const deleteVoterIds = useSelector(state => state.deleteVoterIds);
+  const deleteVoterIds = useSelector(state => state.voter.deleteVoterIds);
 
   const { col: sortCol, dir: sortDir } = useSelector(
     state => state.voter.votersSort);
@@ -30,6 +30,7 @@ export const useVoterToolReduxStore = () => {
     addVoter,
     saveVoter,
     deleteVoter,
+    deleteManyVoters,
     deleteVoterIds,
     editVoter: createEditVoterAction,
     cancelVoter: createCancelVoterAction,
@@ -38,7 +39,7 @@ export const useVoterToolReduxStore = () => {
     displayVoterList: createDisplayVoterListAction,
     selectVoterIds: createSelectVoterIdsAction,
     deselectVoterIds: createDeSelectVoterIdsAction,
-  }, dispatch), [dispatch, deleteVoterIds]);
+  }, dispatch), [dispatch]);
 
   useEffect(() => {
     actions.refreshVoters();
