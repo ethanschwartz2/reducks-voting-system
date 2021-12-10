@@ -4,20 +4,21 @@ import { VoteIdentificationForm } from "./VoterIdentificationForm";
 import { BallotForm } from "./BallotForm";
 import { useBallotReduxStore } from "../hooks/useBallotReduxStore";
 import { ELECTIONS_FLOW, VOTER_IDEN_FLOW, BALLOT_FLOW, SUCCESS_FLOW } from "../reducers/ballotReducers"
+import {useElectionReduxStore} from "../hooks/useElectionReduxStore";
 
-export const Vote = (props) => {
-    const { 
+export const Vote = () => {
+    const {
         voteFlow,
         voterId,
         election,
-        elections,
         errorMessage,
         castBallot,
         verifyVoter,
         refreshElection,
-        refreshElections,
         updateVoteFlow,
     } = useBallotReduxStore();
+
+    const {elections} = useElectionReduxStore()
 
     return(
       <>

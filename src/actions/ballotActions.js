@@ -1,5 +1,5 @@
 import { one } from '../apis/voters';
-import { oneElection, replaceElection, allElections } from '../apis/elections';
+import { oneElection, replaceElection } from '../apis/elections';
 
 export const CAST_BALLOT_REQUEST_ACTION = 'CAST_BALLOT_REQUEST';
 export const CAST_BALLOT_DONE_ACTION = "CAST_BALLOT_DONE";
@@ -7,8 +7,6 @@ export const VERIFY_VOTER_ID_REQUEST_ACTION = "VERIFY_VOTER_ID_REQUEST";
 export const VERIFY_VOTER_ID_DONE_ACTION = "VERIFY_VOTER_ID_DONE";
 export const REFRESH_ELECTION_REQUEST_ACTION = "REFRESH_ELECTION_REQUEST";
 export const REFRESH_ELECTION_DONE_ACTION = "REFRESH_ELECTION_DONE";
-export const REFRESH_ELECTIONS_REQUEST_ACTION = "REFRESH_ELECTIONS_REQUEST";
-export const REFRESH_ELECTIONS_DONE_ACTION = "REFRESH_ELECTIONS_DONE";
 
 export const UPDATE_VOTE_FLOW_ACTION = "UPDATE_VOTE_FLOW";
 
@@ -87,23 +85,4 @@ export const refreshElection = (electionId) => {
           dispatch(createRefreshElectionDoneAction(election));
         });
     };
-};
-
-export const createRefreshElectionsRequestAction = () => ({ type: REFRESH_ELECTIONS_REQUEST_ACTION });
-export const createRefreshElectionsDoneAction = elections => ({
-  type: REFRESH_ELECTIONS_DONE_ACTION, payload: { elections }
-});
-
-export const refreshElections = () => {
-
-  // this function is the function action object
-  // when the middleware invokes this function is passes in the store's
-  // dispatch method
-  return dispatch => {
-
-    dispatch(createRefreshElectionsRequestAction());
-    return allElections().then(elections => {
-      dispatch(createRefreshElectionsDoneAction(elections));
-    });
-  };
 };
