@@ -85,6 +85,40 @@
           "yesCount": 0
         }
       ]
+    },
+    {
+      "id": 3,
+      "name": "Outer Space",
+      "voterIds": [],
+      "questions": [
+        {
+          "questionId": 1,
+          "question": "Want to orbit Earth?",
+          "yesCount": 0
+        },
+        {
+          "questionId": 2,
+          "question": "?Want to go to Mars?",
+          "yesCount": 0
+        },
+        {
+          "questionId": 3,
+          "question": "Is Pluto a planet?",
+          "yesCount": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Star Wars or Star Trek",
+      "voterIds": [],
+      "questions": [
+        {
+          "questionId": 1,
+          "question": "Star Wars is way better than Star Trek?",
+          "yesCount": 0
+        }
+      ]
     }
   ]
 }
