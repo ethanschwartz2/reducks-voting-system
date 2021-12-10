@@ -1,49 +1,7 @@
 import {useState} from "react";
 import './CurrentElections.css'
-const ElectionInfo = {"elections": [
-        {
-            "id": 1,
-            "name": "election1",
-            "voterIds": [
-                1,
-                2
-            ],
-            "questions": [
-                {
-                    "questionId": 1,
-                    "question": "A cat is better pet then a dog?",
-                    "yesCount": 4
-                },
-                {
-                    "questionId": 2,
-                    "question": "mayo is better than miracle whip",
-                    "yesCount": 5
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "name": "election2",
-            "voterIds": [
-                2
-            ],
-            "questions": [
-                {
-                    "questionId": 1,
-                    "question": "A cat is better pet then a dog?",
-                    "yesCount": 4
-                },
-                {
-                    "questionId": 2,
-                    "question": "mayo is better than miracle whip",
-                    "yesCount": 5
-                }
-            ]
-        }
-    ],
-}
 
-export const CurrentElections = () => {
+export const CurrentElections = (props) => {
     const [expandedRow, setExpandedRow] = useState([]);
 
     const ExpandCollapseRow = (rowId) => {
@@ -52,7 +10,11 @@ export const CurrentElections = () => {
             setExpandedRow([...expandedRow, rowId])
     }
 
-
+    if(props.elections.length === 0) {
+        return(
+            <div>No Election Info Found.</div>
+        )
+    }
     return(
         <div className="CurrentElections">
         <table className="OuterTable">
@@ -65,21 +27,21 @@ export const CurrentElections = () => {
             </tr>
             </thead>
             <tbody>
-            {ElectionInfo.elections.map(Election => {
+            {props.elections.map(Election => {
                 return (
                     <>
                         <tr key={Election.id}>
                             <td>{Election.id}</td>
                             <td>{Election.name}</td>
-                            <td>{Election.voterIds.length}</td>
+                            <td>{Election.voterIds? Election.voterIds.length: 0}</td>
                             <td>
-                                <button type="button"
+                                <button type="button" key={Election.id}
                                         onClick={()=>ExpandCollapseRow(Election.id)}>{expandedRow.includes(Election.id) ? "Collapse Results" : "View Results"}</button>
                             </td>
                         </tr>
                         {expandedRow.includes(Election.id) ?
                             <tr key={Election.id+"a"}>
-                                <td key={Election.id+"a"} colspan={4}>
+                                <td key={Election.id+"a"} colSpan={4}>
                                     <table>
                                         <thead>
                                         <tr>
@@ -94,7 +56,7 @@ export const CurrentElections = () => {
                                                 <tr key={Election.id+question.questionId}>
                                                     <td>{question.questionId}</td>
                                                     <td>{question.question}</td>
-                                                    <td>Yes: {question.yesCount}, No: {Election.voterIds.length - question.yesCount}</td>
+                                                    <td>{Election.voterIds & Election.voterIds.length > 0 ? `Yes: ${question.yesCount}, No: ${Election.voterIds.length - question.yesCount}` : "N/A"}</td>
                                                 </tr>
                                             );
                                         })

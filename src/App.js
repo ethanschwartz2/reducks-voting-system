@@ -2,7 +2,7 @@ import {
     BrowserRouter,
     Routes,
     Route,
-    Link
+    Link,
 } from "react-router-dom";
 import { Provider } from "react-redux";
 
@@ -13,7 +13,7 @@ import {Layout} from "./Layout";
 import { voteToolStore } from "./stores/voteToolStore";
 
 function App() {
-  return (
+      return (
       <Layout>
           <BrowserRouter>
               <header><h1>ReDucks Voting System</h1></header>
