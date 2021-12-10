@@ -29,8 +29,9 @@ export const castBallot = ballot => {
 
                 election.questions.map(question => {
                     if (ballot[question.questionId] === true) {
-                        question.yesCount += 1;
+                        return(question.yesCount += 1);
                     }
+                    return null;
                 });
                 replaceElection(election).then(election => {
                     dispatch(createCastBallotDoneAction(election.id));
@@ -65,9 +66,9 @@ export const verifyVoter = (voterId, voteFlow) => {
                     dispatch(createUpdateVoteFlowAction(voteFlow));
                 } else {
                     dispatch(createVerifyVoterDoneAction(0));
-                };
+                }
             });
-        };
+        }
     };
 }
 
@@ -84,7 +85,7 @@ export const refreshElection = (electionId) => {
         dispatch(createRefreshElectionRequestAction(electionId));
         return oneElection(electionId).then(election => {
           dispatch(createRefreshElectionDoneAction(election));
-        });    
+        });
     };
 };
 
