@@ -35,9 +35,7 @@
     {
       "id": 1,
       "name": "General Election",
-      "voterIds": [
-        1
-      ],
+      "voterIds": [],
       "questions": [
         {
           "questionId": 1,

@@ -10,7 +10,9 @@ export const useForm = initialForm => {
     setForm({
       ...form,
       [ e.target.name ]: e.target.type === 'number'
-        ? parseInt(e.target.value, 10) : e.target.value,
+        ? parseInt(e.target.value, 10)
+        : e.target.type === 'checkbox' 
+        ? e.target.checked : e.target.value,
     });
 
   };
