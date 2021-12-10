@@ -82,6 +82,10 @@ export const deleteVoter = voterId => {
   };
 };
 
+export const deleteManyVoters = voterIds => {
+  console.log(voterIds);
+};
+
 export const createEditVoterAction = voterId =>
   ({ type: EDIT_VOTER_ACTION, payload: { voterId } });
 export const createCancelVoterAction = () =>
