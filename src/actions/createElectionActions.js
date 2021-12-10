@@ -16,7 +16,6 @@ export const createElectionRequestAction = election => ({
 
 export const getElections = () => {
     // get the election
-    console.log('done');
     return dispatch => {
         dispatch(createCurrentElectionsRequestAction());
         return allElections().then(value => {

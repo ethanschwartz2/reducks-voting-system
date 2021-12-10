@@ -23,7 +23,7 @@ export const CreateElection = () => {
     return(
         <div className="CreateElection">
             <header>
-                <h2>Current Elections</h2>
+                <h2>Election Results</h2>
                 <button className="CreateElectionButton" type="button" onClick={openModal}>Create An Election</button>
             </header>
             <hr/>
