@@ -52,7 +52,8 @@ export const VoterTable = props => {
                 onSelectVoterIds={props.onSelectVoterIds}
                 onDeselectVoterIds={props.onDeselectVoterIds}/>)}
                 <tr></tr>
-                <tr><td><button type="button" onClick={props.onDeleteManyVoters}>Delete Voters</button></td></tr>
+                <tr><td></td><td></td><td></td><td><button type="button" onClick={props.onDeleteManyVoters}>Delete Voters</button></td>
+                <td><button type="button" onClick={props.onRegiterHomePage}>Registration Home</button></td></tr>
       </tbody>
     </table>
     </form>

@@ -22,13 +22,33 @@
     },
     {
       "id": 3,
-      "firstName": "Sally",
-      "lastName": "Smith",
-      "address": "1 Main St",
-      "countyOrCity": "San Diego",
+      "firstName": "John",
+      "lastName": "Doe",
+      "address": "Java Street",
+      "countyOrCity": "Sunnyvale",
       "birthdate": "10/01/2000",
-      "email": "sally.smith@intuit.com",
-      "phone": "123456778"
+      "email": "john.doe@intuit1.com",
+      "phone": "4085673434"
+    },
+    {
+      "id": 4,
+      "firstName": "Allen",
+      "lastName": "Jacob",
+      "address": "Hollenbeck",
+      "countyOrCity": "San MAteo",
+      "birthdate": "10/01/2000",
+      "email": "allen.jacob@intuit.com",
+      "phone": "3451234567"
+    },
+    {
+      "firstName": "Joe",
+      "lastName": "Doe",
+      "address": "lane 45",
+      "countyOrCity": "San jose",
+      "birthdate": "10/01/2000",
+      "email": "joe.doe@intuit2.com",
+      "phone": "3453455656",
+      "id": 5
     }
   ],
   "elections": [
