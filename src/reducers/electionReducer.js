@@ -1,7 +1,13 @@
 import {combineReducers} from "redux";
 
-import {CURRENT_ELECTIONS_DONE_ACTION} from "../actions/createElectionActions"
+import {CREATE_MODAL_REQUEST_ACTION, CURRENT_ELECTIONS_DONE_ACTION} from "../actions/createElectionActions"
 
+export const modalInfoReducer = (modal = false, action) => {
+    if(action.type === CREATE_MODAL_REQUEST_ACTION) {
+        modal = action.payload.value;
+    }
+    return modal
+}
 
 export const electionInfoReducer= (elections = [], action) => {
     if(action.type === CURRENT_ELECTIONS_DONE_ACTION) {
@@ -11,5 +17,6 @@ export const electionInfoReducer= (elections = [], action) => {
 }
 
 export const electionReducer = combineReducers({
-    elections: electionInfoReducer
+    elections: electionInfoReducer,
+    modal: modalInfoReducer
 })
