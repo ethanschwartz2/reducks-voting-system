@@ -56,7 +56,7 @@ export const CurrentElections = (props) => {
                                                 <tr key={Election.id+question.questionId}>
                                                     <td>{question.questionId}</td>
                                                     <td>{question.question}</td>
-                                                    <td>{Election.voterIds & Election.voterIds.length > 0 ? `Yes: ${question.yesCount}, No: ${Election.voterIds.length - question.yesCount}` : "N/A"}</td>
+                                                    <td>{Election.voterIds.length > 0 ? `Yes: ${question.yesCount}, No: ${Election.voterIds.length - question.yesCount}` : "N/A"}</td>
                                                 </tr>
                                             );
                                         })
