@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {Fragment, useState} from "react";
 import './CurrentElections.css'
 
 export const CurrentElections = (props) => {
@@ -29,19 +29,19 @@ export const CurrentElections = (props) => {
             <tbody>
             {props.elections.map(Election => {
                 return (
-                    <>
-                        <tr key={Election.id}>
+                    <Fragment key={Election.id+"header"}>
+                        <tr>
                             <td>{Election.id}</td>
                             <td>{Election.name}</td>
                             <td>{Election.voterIds? Election.voterIds.length: 0}</td>
                             <td>
-                                <button type="button" key={Election.id}
+                                <button type="button"
                                         onClick={()=>ExpandCollapseRow(Election.id)}>{expandedRow.includes(Election.id) ? "Collapse Results" : "View Results"}</button>
                             </td>
                         </tr>
                         {expandedRow.includes(Election.id) ?
-                            <tr key={Election.id+"a"}>
-                                <td key={Election.id+"a"} colSpan={4}>
+                            <tr key={Election.id+"expanded"}>
+                                <td colSpan={4}>
                                     <table>
                                         <thead>
                                         <tr>
@@ -53,7 +53,7 @@ export const CurrentElections = (props) => {
                                         <tbody>
                                         {Election.questions.map(question => {
                                             return (
-                                                <tr key={Election.id+question.questionId}>
+                                                <tr key={Election.id+"questions"}>
                                                     <td>{question.questionId}</td>
                                                     <td>{question.question}</td>
                                                     <td>{Election.voterIds.length > 0 ? `Yes: ${question.yesCount}, No: ${Election.voterIds.length - question.yesCount}` : "N/A"}</td>
@@ -65,7 +65,7 @@ export const CurrentElections = (props) => {
                                     </table>
                                 </td>
                             </tr> : null}
-                    </>
+                    </Fragment>
                 )
             })}
             </tbody>
