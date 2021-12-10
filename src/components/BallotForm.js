@@ -3,9 +3,9 @@ import { useForm } from '../hooks/useForm';
 export const BallotForm = props => {
 
   const [ ballotForm, change, resetBallotForm ] = useForm({
-    electionId: props.electionId,
+    electionId: props.election.id,
     voterId: props.voterId,
-    questions: props.questions,
+    questions: props.election.questions,
   });
 
   const submitBallot = () => {
@@ -32,7 +32,8 @@ export const BallotForm = props => {
           <label>
               {question.question}
           </label>
-          <input type="checkbox" id={question.questionId} name={question.questionId} onChange={change} />
+          <input type="checkbox" key={question.questionId} id={question.questionId}
+            name={question.questionId} onChange={change} />
         </>
       )})}
       <button type="button" onClick={submitBallot}>{props.buttonText}</button>

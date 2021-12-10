@@ -1,29 +1,26 @@
-import '../../ModalLayout.css'
+import './ModalLayout.css'
 import { useState } from 'react';
 
 export const ElectionModal = (props)=> {
-    const [electionForm, setElectionForm] = useState({
-        electionName: "",
+    const BlankElectionForm={
+        // id:0,
+        name: "",
+        voterIds: [],
         questions: [{
             questionId: 1,
             question: "",
             yesCount: 0,
         }],
-    })
+    }
 
-    const resetForm = () => setElectionForm({
-        electionName: "",
-        questions: [{
-            questionId: 1,
-            question: "",
-            yesCount: 0,
-        }],
-    });
+    const [electionForm, setElectionForm] = useState({...BlankElectionForm})
+
+    const resetForm = () => setElectionForm({...BlankElectionForm});
 
     const updateElectionName = e => {
         setElectionForm({
             ...electionForm,
-            electionName: e.target.value,
+            name: e.target.value,
         });
     };
 
@@ -46,6 +43,7 @@ export const ElectionModal = (props)=> {
             questions: electionQuestions,
             });
     }
+
     const addQuestion = ()=> {
         let newQuestion = {
             questionId: Math.max(...electionForm.questions.map(question=>question.questionId),0)+1,
@@ -58,6 +56,10 @@ export const ElectionModal = (props)=> {
         });
     }
 
+    const saveElection = () => {
+        props.saveElection(electionForm)
+        props.close();
+    }
     return(
         <div className="modal">
             <div className="modal-content">
@@ -69,7 +71,7 @@ export const ElectionModal = (props)=> {
                     <form>
                         <label>
                             Election Name:
-                            <input type="text" name="electionName" value={electionForm.name} onChange={updateElectionName} />
+                            <input type="text" name="name" value={electionForm.name} onChange={updateElectionName} />
                         </label>
                         {electionForm.questions.map(question => {
                             return(
@@ -82,7 +84,7 @@ export const ElectionModal = (props)=> {
                     </form>
                 </div>
                 <div className="modal-footer">
-                    <button type="button" onClick={props.saveElection}>Create Election</button>
+                    <button type="button" onClick={saveElection}>Create Election</button>
                     <button type="button" onClick={props.close}>Cancel</button>
                 </div>
             </div>

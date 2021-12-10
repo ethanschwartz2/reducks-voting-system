@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from "react-redux";
+import { voteToolStore } from "./stores/voteToolStore";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={voteToolStore}>
+      <App />
+    </Provider>,
   </React.StrictMode>,
   document.getElementById('root')
 );

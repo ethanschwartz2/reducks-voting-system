@@ -67,8 +67,8 @@
   color: white;
   grid-area: footer;
   background-color: #8b0000;
-  padding-top: 4px;
   display: grid;
   justify-content: center;
-  font-size: 12px;
+  font-size: 14px;
+  align-items: center;
 }

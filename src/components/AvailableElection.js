@@ -1,10 +1,6 @@
 
 export const AvailableElections = (props) => {
 
-    const onVote = () => {
-        props.onUpdateVoteFlow(props.next);
-    };
-    
     return(
         <table>
             <thead>
@@ -22,7 +18,10 @@ export const AvailableElections = (props) => {
                         <td>{election.name}</td>
                         <td>
                             <button type="button"
-                                onClick={onVote}>Vote</button>
+                                onClick={ () => {
+                                    props.onRefreshElection(election.id);
+                                    props.onUpdateVoteFlow(props.next);
+                                }}>Vote</button>
                         </td>
                     </tr>
                 )
