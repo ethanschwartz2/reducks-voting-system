@@ -1,10 +1,5 @@
-import { useForm } from "../hooks/useForm";
 
 export const VoterViewRow = (props) => {
-
-    const [ voterForm, change] = useForm({
-        voterId: props.voter.id,
-    });
 
     const removeVoter = () => {
         props.onDeleteVoter(props.voter.id);
