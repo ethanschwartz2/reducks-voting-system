@@ -14,7 +14,7 @@ export const VoterViewRow = (props) => {
     }
 
     return(
-        <tr><td><input type="checkbox" id={props.voter.id} name={props.voter.id} onChange={selectVoter} /></td>
+        <tr><td><input type="checkbox" id={props.voter.id} name={props.voter.id} onChange={selectVoter} style={{marginBottom: '0px'}}/></td>
             <td>{props.voter.id}</td>
             <td>{props.voter.firstName}</td>
             <td>{props.voter.lastName}</td>
