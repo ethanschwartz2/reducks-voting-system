@@ -4,6 +4,7 @@ export const CURRENT_ELECTIONS_REQUEST_ACTION = 'CURRENT_ELECTIONS_REQUEST';
 export const CURRENT_ELECTIONS_DONE_ACTION = 'CURRENT_ELECTIONS_DONE';
 
 export const CREATE_ELECTION_REQUEST_ACTION = 'CREATE_ELECTION_REQUEST';
+export const CREATE_MODAL_REQUEST_ACTION = 'CREATE_MODAL_REQUEST';
 
 export const createCurrentElectionsRequestAction = () => ({
     type: CURRENT_ELECTIONS_REQUEST_ACTION});
@@ -13,6 +14,16 @@ export const createCurrentElectionsDoneAction = (value) => ({
 export const createElectionRequestAction = election => ({
     type: CREATE_ELECTION_REQUEST_ACTION, payload: { election }
 });
+
+export const createModalRequestAction = value => ({
+    type: CREATE_MODAL_REQUEST_ACTION, payload: { value }
+});
+
+export const setModalForm = (value) => {
+    return dispatch => {
+        dispatch(createModalRequestAction(value));
+    }
+}
 
 export const getElections = () => {
     // get the election
