@@ -4,6 +4,7 @@ import {
   REFRESH_VOTERS_DONE_ACTION, EDIT_VOTER_ACTION, CANCEL_VOTER_ACTION, 
   SORT_VOTERS_ACTION, DISPLAY_VOTER_ADD_FORM_ACTION, DISPLAY_VOTER_LIST_ACTION,
   ADD_VOTER_REQUEST_ACTION,
+  SELECT_VOTER_IDS_ACTION, DESELECT_VOTER_IDS_ACTION,
 } from "../actions/voterToolActions";
 
 // const voterList = [
@@ -47,7 +48,17 @@ export const displayFormReducer = (displayForm = '', action) => {
     default: 
       return displayForm;
   }
-;}
+};
+
+export const deleteVoterIdsReducer = (deleteVoterIds = [], action) => {
+  let voterIds = [...deleteVoterIds];
+  if(action.type === SELECT_VOTER_IDS_ACTION) {
+    voterIds.push(action.payload.voterId);
+  } else if(action.type === DESELECT_VOTER_IDS_ACTION) {
+    voterIds = voterIds.filter(item => item !== action.payload.voterId)
+  }
+  return voterIds;
+}
 
 export const votersSortReducer = (
   votersSort = { col: 'id', dir: 'asc' }, action) => {
@@ -88,4 +99,5 @@ export const voterToolReducer = combineReducers({
   votersSort: votersSortReducer,
   isLoading: isLoadingReducer,
   displayForm: displayFormReducer,
+  deleteVoterIds: deleteVoterIdsReducer,
 })

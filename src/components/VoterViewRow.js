@@ -1,12 +1,25 @@
+import { useForm } from "../hooks/useForm";
 
 export const VoterViewRow = (props) => {
+
+    const [ voterForm, change] = useForm({
+        voterId: props.voter.id,
+    });
 
     const removeVoter = () => {
         props.onDeleteVoter(props.voter.id);
     }
 
+    const selectVoter = event =>{
+        if(event.target.checked) {
+            props.onSelectVoterIds(event.target.id);
+        } else {
+            props.onDeselectVoterIds(event.target.id);
+        }
+    }
+
     return(
-        <tr>
+        <tr><td><input type="checkbox" id={props.voter.id} name={props.voter.id} onChange={selectVoter} /></td>
             <td>{props.voter.id}</td>
             <td>{props.voter.firstName}</td>
             <td>{props.voter.lastName}</td>

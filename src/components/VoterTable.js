@@ -12,9 +12,10 @@ export const VoterTable = props => {
 
 
   return (
+    <form>
     <table>
       <thead>
-        <tr>
+        <tr><th></th>
           <th><button type="button" onClick={() => props.onSortVoters('id')}>
               ID{sortDirectionIndicator('id')}
             </button></th>
@@ -47,10 +48,13 @@ export const VoterTable = props => {
             ? <VoterEditRow key={voter.id} voter={voter}
                 onSaveVoter={props.onSaveVoter} onCancelVoter={props.onCancelVoter} />
             : <VoterViewRow key={voter.id} voter={voter}
-                onEditVoter={props.onEditVoter} onDeleteVoter={props.onDeleteVoter} />)}
+                onEditVoter={props.onEditVoter} onDeleteVoter={props.onDeleteVoter} 
+                onSelectVoterIds={props.onSelectVoterIds}
+                onDeselectVoterIds={props.onDeselectVoterIds}/>)}
       </tbody>
     </table>
-
+    </form>
   );
 
 };
+

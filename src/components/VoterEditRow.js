@@ -22,6 +22,7 @@ export const VoterEditRow = (props) => {
 
     return(
         <tr>
+            <td></td>
             <td>{props.voter.id}</td>
             <td><input type="text" name="firstName" value={voterForm.firstName} onChange={change}/></td>
             <td><input type="text" name="lastName" value={voterForm.lastName} onChange={change}/></td>
