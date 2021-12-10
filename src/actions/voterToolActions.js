@@ -19,6 +19,9 @@ export const SORT_VOTERS_ACTION = 'SORT_VOTERS';
 export const DISPLAY_VOTER_ADD_FORM_ACTION = 'DISPLAY_VOTER_FORM'
 export const DISPLAY_VOTER_LIST_ACTION = 'DISPLAY_VOTER_LIST'
 
+export const SELECT_VOTER_IDS_ACTION = 'SELECT_VOTER_IDS'
+export const DESELECT_VOTER_IDS_ACTION = 'DESELECT_VOTER_IDS'
+
 export const createRefreshVotersRequestAction = () => ({ type: REFRESH_VOTERS_REQUEST_ACTION });
 export const createRefreshVotersDoneAction = voters => ({
   type: REFRESH_VOTERS_DONE_ACTION, payload: { voters }
@@ -26,10 +29,7 @@ export const createRefreshVotersDoneAction = voters => ({
 
 
 export const refreshVoters = () => {
-
-  // this function is the function action object
-  // when the middleware invokes this function is passes in the store's
-  // dispatch method
+  
   return dispatch => {
 
     dispatch(createRefreshVotersRequestAction());
@@ -82,14 +82,17 @@ export const deleteVoter = voterId => {
   };
 };
 
-
 export const createEditVoterAction = voterId =>
   ({ type: EDIT_VOTER_ACTION, payload: { voterId } });
 export const createCancelVoterAction = () =>
   ({ type: CANCEL_VOTER_ACTION });
 export const createSortVotersAction = col =>
   ({ type: SORT_VOTERS_ACTION, payload: { col } });    
- export const createDisplayVoterFormAction = () => 
+export const createDisplayVoterFormAction = () => 
    ({type: DISPLAY_VOTER_ADD_FORM_ACTION})
-   export const createDisplayVoterListAction = () => 
+export const createDisplayVoterListAction = () => 
    ({type: DISPLAY_VOTER_LIST_ACTION})
+export const createSelectVoterIdsAction = (voterId) => 
+   ({type: SELECT_VOTER_IDS_ACTION, payload: { voterId } })
+export const createDeSelectVoterIdsAction = (voterId) => 
+   ({type: DESELECT_VOTER_IDS_ACTION, payload: { voterId } })

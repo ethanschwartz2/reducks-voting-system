@@ -7,7 +7,8 @@ export const VoterTableContainer = () => {
   const {
     voters, editVoterId, displayForm, sortCol, sortDir,
     editVoter, deleteVoter, sortVoters,
-    saveVoter, cancelVoter } = useVoterToolReduxStore();
+    saveVoter, cancelVoter, selectVoter,
+    selectVoterIds, deselectVoterIds } = useVoterToolReduxStore();
 
   return (
     <>
@@ -16,7 +17,9 @@ export const VoterTableContainer = () => {
                 sortCol={sortCol} sortDir={sortDir}
                 onEditVoter={editVoter} onDeleteVoter={deleteVoter}
                 onSortVoters={sortVoters}
-                onSaveVoter={saveVoter} onCancelVoter={cancelVoter} />
+                onSaveVoter={saveVoter} onCancelVoter={cancelVoter} 
+                onSelectVoter={selectVoter} onSelectVoterIds={selectVoterIds}
+                onDeselectVoterIds={deselectVoterIds}/>
       : null}
     </>
   );

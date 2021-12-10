@@ -6,7 +6,9 @@ import {
   addVoter, saveVoter, deleteVoter, refreshVoters,
   createEditVoterAction, createCancelVoterAction, 
   createSortVotersAction, createDisplayVoterFormAction, 
-  createDisplayVoterListAction, 
+  createDisplayVoterListAction,
+  createSelectVoterIdsAction,
+  createDeSelectVoterIdsAction, 
 } from "../actions/voterToolActions";
 
 import { sortedVotersSelector } from "../selectors/voterToolSelectors";
@@ -16,6 +18,7 @@ export const useVoterToolReduxStore = () => {
   const voters = useSelector(sortedVotersSelector);
   const editVoterId = useSelector(state => state.voter.editVoterId);
   const displayForm = useSelector(state => state.voter.displayForm);
+  const deleteVoterIds = useSelector(state => state.deleteVoterIds);
 
   const { col: sortCol, dir: sortDir } = useSelector(
     state => state.voter.votersSort);
@@ -27,12 +30,15 @@ export const useVoterToolReduxStore = () => {
     addVoter,
     saveVoter,
     deleteVoter,
+    deleteVoterIds,
     editVoter: createEditVoterAction,
     cancelVoter: createCancelVoterAction,
     sortVoters: createSortVotersAction,
     displayVoterForm: createDisplayVoterFormAction,
     displayVoterList: createDisplayVoterListAction,
-  }, dispatch), [dispatch]);
+    selectVoterIds: createSelectVoterIdsAction,
+    deselectVoterIds: createDeSelectVoterIdsAction,
+  }, dispatch), [dispatch, deleteVoterIds]);
 
   useEffect(() => {
     actions.refreshVoters();
@@ -42,10 +48,9 @@ export const useVoterToolReduxStore = () => {
     voters,
     editVoterId,
     displayForm,
+    deleteVoterIds,
     sortCol,
     sortDir,
     ...actions,
   };
-
-
 };
