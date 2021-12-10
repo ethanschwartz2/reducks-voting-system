@@ -4,7 +4,7 @@ import './CreateElectionLayout.css'
 import {useElectionReduxStore} from "../../hooks/useElectionReduxStore";
 
 export const CreateElection = () => {
-    const {elections, addElection, modal, setModalForm} = useElectionReduxStore();
+    const {elections, addElection, modal, setModalForm, updateFormQuestions, updateFormName, electionModalForm, addQuestion} = useElectionReduxStore();
 
     return(
         <div className="CreateElection">
@@ -14,7 +14,15 @@ export const CreateElection = () => {
             </header>
             <hr/>
                 <CurrentElections elections={elections}/>
-                {modal ? <ElectionModal close={()=>setModalForm(false)} saveElection={(electionInfo)=>addElection(electionInfo)}/> : null}
+                {modal ?
+                    <ElectionModal
+                        formData={electionModalForm}
+                        close={()=>setModalForm(false)}
+                        saveElection={(electionInfo)=>addElection(electionInfo)}
+                        updateFormQuestions={(index,value)=>updateFormQuestions(index,value)}
+                        updateFormName={(value)=>updateFormName(value)}
+                        addQuestion={addQuestion}
+                    /> : null}
 
     </div>
     );
