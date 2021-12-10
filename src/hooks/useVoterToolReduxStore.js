@@ -31,7 +31,6 @@ export const useVoterToolReduxStore = () => {
     saveVoter,
     deleteVoter,
     deleteManyVoters,
-    deleteVoterIds,
     editVoter: createEditVoterAction,
     cancelVoter: createCancelVoterAction,
     sortVoters: createSortVotersAction,

@@ -88,16 +88,12 @@ export const createDeleteManyVotersRequestAction = voterId =>
   ({ type: DELETE_MANY_VOTERS_REQUEST_ACTION, payload: { voterId } });
 
 export const deleteManyVoters = voterIds => {
-  console.log(voterIds);
   return dispatch => {
     dispatch(createDeleteManyVotersRequestAction(voterIds));
-    //Promise.all(
-      voterIds.forEach(voterId => {
-        console.log("DELETTING: " + voterId);
-        remove(voterId);
-    })
-    dispatch(refreshVoters());
-    //remove(voterId).then(() => dispatch(refreshVoters()));
+    Promise.all(
+      voterIds.map(voterId => {
+        return remove(voterId);
+    })).then(() => dispatch(refreshVoters()));
   };
 };
 
