@@ -22,6 +22,8 @@ export const DISPLAY_VOTER_LIST_ACTION = 'DISPLAY_VOTER_LIST'
 export const SELECT_VOTER_IDS_ACTION = 'SELECT_VOTER_IDS'
 export const DESELECT_VOTER_IDS_ACTION = 'DESELECT_VOTER_IDS'
 
+export const DELETE_MANY_VOTERS_REQUEST_ACTION = 'DELETE_MANY_VOTERS_REQUEST';
+
 export const createRefreshVotersRequestAction = () => ({ type: REFRESH_VOTERS_REQUEST_ACTION });
 export const createRefreshVotersDoneAction = voters => ({
   type: REFRESH_VOTERS_DONE_ACTION, payload: { voters }
@@ -82,8 +84,21 @@ export const deleteVoter = voterId => {
   };
 };
 
+export const createDeleteManyVotersRequestAction = voterId =>
+  ({ type: DELETE_MANY_VOTERS_REQUEST_ACTION, payload: { voterId } });
+
 export const deleteManyVoters = voterIds => {
   console.log(voterIds);
+  return dispatch => {
+    dispatch(createDeleteManyVotersRequestAction(voterIds));
+    //Promise.all(
+      voterIds.forEach(voterId => {
+        console.log("DELETTING: " + voterId);
+        remove(voterId);
+    })
+    dispatch(refreshVoters());
+    //remove(voterId).then(() => dispatch(refreshVoters()));
+  };
 };
 
 export const createEditVoterAction = voterId =>

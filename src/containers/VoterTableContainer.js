@@ -11,7 +11,6 @@ export const VoterTableContainer = () => {
     selectVoterIds, deselectVoterIds, deleteManyVoters } = useVoterToolReduxStore();
 
     const deleteSelectedVoters = () => {
-      console.log("container"+deleteVoterIds);
       deleteManyVoters(deleteVoterIds);
     }
 
