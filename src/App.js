@@ -27,11 +27,11 @@ function App() {
               <nav>
 
                   <ul className="menu">
-                      <li className="menu-item" onSelect={() => updateVoteFlow(ELECTIONS_FLOW)}
+                      <li className="menu-item" onClick={() => updateVoteFlow(ELECTIONS_FLOW)}
                       ><Link to="/register">Register</Link></li>
-                      <li className="menu-item" onSelect={ () => {
+                      <li className="menu-item" onClick={ () => {
                       }}><Link to="/vote">Vote</Link></li>
-                      <li className="menu-item" onSelect={() => {
+                      <li className="menu-item" onClick={() => {
                           updateVoteFlow(ELECTIONS_FLOW);
                       }}>
                       <Link to="/createElection">Create Election</Link></li>
