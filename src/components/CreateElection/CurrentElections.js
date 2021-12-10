@@ -27,20 +27,20 @@ export const CurrentElections = (props) => {
             </tr>
             </thead>
             <tbody>
-            {props.elections.map(Election => {
+            {props.elections.map(election => {
                 return (
-                    <Fragment key={Election.id+"header"}>
+                    <Fragment key={election.id+"header"}>
                         <tr>
-                            <td>{Election.id}</td>
-                            <td>{Election.name}</td>
-                            <td>{Election.voterIds? Election.voterIds.length: 0}</td>
+                            <td>{election.id}</td>
+                            <td>{election.name}</td>
+                            <td>{election.voterIds? election.voterIds.length: 0}</td>
                             <td>
                                 <button type="button"
-                                        onClick={()=>ExpandCollapseRow(Election.id)}>{expandedRow.includes(Election.id) ? "Collapse Results" : "View Results"}</button>
+                                        onClick={()=>ExpandCollapseRow(election.id)}>{expandedRow.includes(election.id) ? "Collapse Results" : "View Results"}</button>
                             </td>
                         </tr>
-                        {expandedRow.includes(Election.id) ?
-                            <tr key={Election.id+"expanded"}>
+                        {expandedRow.includes(election.id) ?
+                            <tr key={election.id+"expanded"}>
                                 <td colSpan={4}>
                                     <table>
                                         <thead>
@@ -51,12 +51,12 @@ export const CurrentElections = (props) => {
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        {Election.questions.map(question => {
+                                        {election.questions.map(question => {
                                             return (
-                                                <tr key={Election.id+"questions"}>
+                                                <tr key={`ElectionId${election.id} QuestionId${question.questionId}`}>
                                                     <td>{question.questionId}</td>
                                                     <td>{question.question}</td>
-                                                    <td>{Election.voterIds.length > 0 ? `Yes: ${question.yesCount}, No: ${Election.voterIds.length - question.yesCount}` : "N/A"}</td>
+                                                    <td>{election.voterIds.length > 0 ? `Yes: ${question.yesCount}, No: ${election.voterIds.length - question.yesCount}` : "N/A"}</td>
                                                 </tr>
                                             );
                                         })
