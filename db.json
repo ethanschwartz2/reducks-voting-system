@@ -12,19 +12,29 @@
     },
     {
       "id": 2,
-      "firstName": "Joe",
+      "firstName": "Jane",
       "lastName": "Smith",
       "address": "1 Main St",
       "countyOrCity": "San Diego",
-      "birthdate": "01/01/2000",
-      "email": "joe.smith@intuit.com",
+      "birthdate": "10/01/2000",
+      "email": "jane.smith@intuit.com",
+      "phone": "123456778"
+    },
+    {
+      "id": 3,
+      "firstName": "Sally",
+      "lastName": "Smith",
+      "address": "1 Main St",
+      "countyOrCity": "San Diego",
+      "birthdate": "10/01/2000",
+      "email": "sally.smith@intuit.com",
       "phone": "123456778"
     }
   ],
   "elections": [
     {
       "id": 1,
-      "name": "election1",
+      "name": "General Election",
       "voterIds": [
         1
       ],
@@ -32,31 +42,29 @@
         {
           "questionId": 1,
           "question": "A cat is better pet then a dog?",
-          "yesCount": 6
+          "yesCount": 0
         },
         {
           "questionId": 2,
           "question": "Mayo is better than miracle whip",
-          "yesCount": 7
+          "yesCount": 0
         }
       ]
     },
     {
       "id": 2,
-      "name": "election2",
-      "voterIds": [
-        2
-      ],
+      "name": "Food Election",
+      "voterIds": [],
       "questions": [
         {
           "questionId": 1,
           "question": "Love French food?",
-          "yesCount": 4
+          "yesCount": 0
         },
         {
           "questionId": 2,
           "question": "Love Italian food?",
-          "yesCount": 5
+          "yesCount": 0
         }
       ]
     }
