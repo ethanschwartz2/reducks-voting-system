@@ -32,8 +32,8 @@ export const BallotForm = props => {
           <label>
               {question.question}
           </label>
-          <input type="checkbox" id={question.questionId} name={question.questionId}
-            onChange={change} />
+          <input type="checkbox" key={question.questionId} id={question.questionId}
+            name={question.questionId} onChange={change} />
         </>
       )})}
       <button type="button" onClick={submitBallot}>{props.buttonText}</button>

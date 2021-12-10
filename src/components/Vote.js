@@ -26,7 +26,7 @@ export const Vote = (props) => {
         ? <VoteIdentificationForm buttonText="Submit" next={BALLOT_FLOW}
             onUpdateVoteFlow={updateVoteFlow} onVerifyVoter={verifyVoter} election={election}/>
         : voteFlow === BALLOT_FLOW
-        ?<BallotForm buttonText="Submit" election={election} voterId={voterId} next={SUCCESS_FLOW}
+        ?<BallotForm buttonText="Cast Vote" election={election} voterId={voterId} next={SUCCESS_FLOW}
             onUpdateVoteFlow={updateVoteFlow} onCastBallot={castBallot} />
         : voteFlow === SUCCESS_FLOW
         ? <>
